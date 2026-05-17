@@ -24,6 +24,7 @@ fideldxn/
     ├── /js/
     │   └── app.js
     └── /img/
+         └── logoDXN.avif
 
 
 
