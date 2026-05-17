@@ -1,0 +1,57 @@
+fideldxn/
+│
+├── .htaccess
+├── index.php
+├── mi_empresa.php
+├── oportunidad.php
+├── plan_marketing.php
+├── salud.php
+├── sobre_mi.php
+├── productos.php            ← página dinámica (usa ?serie=)
+│
+├── /includes/
+│   ├── config.php
+│   ├── header.php
+│   ├── footer.php
+│   └── funciones.php
+│
+├── /data/
+│   └── productos.json
+│
+└── /assets/
+    ├── /css/
+    │   └── styles.css
+    ├── /js/
+    │   └── app.js
+    └── /img/
+
+
+
+
+
+
+
+
+
+
+
+
+
+============================================
+============================================
+
+PALETA: Degradado Profesional Azul
+Color principal (azul oscuro): #1E3A8A
+Color secundario (índigo): #4338CA
+Color de acento (cian): #06B6D4
+Color de fondo: #FFFFFF (blanco)
+Color de secciones suaves: #E5E7EB (gris claro)
+Color de texto principal: #374151 (gris oscuro)
+
+DEGRADADO UTILIZADO
+Tipo: Degradado lineal
+Dirección: De izquierda a derecha (to right)
+Colores del degradado:
+#1E3A8A → #4338CA → #06B6D4
+Representación CSS:
+linear-gradient(to right, #1E3A8A, #4338CA, #06B6D4)

@@ -1,0 +1,14 @@
+{
+  "bebidas": [
+    { "nombre": "Café DXN", "descripcion": "Bebida energética natural" }
+  ],
+  "te": [
+    { "nombre": "Té Lingzhi", "descripcion": "Infusión saludable" }
+  ],
+  "varios": [
+    { "nombre": "Spirulina", "descripcion": "Suplemento natural" }
+  ],
+  "ootea": [
+    { "nombre": "OoTea", "descripcion": "Té premium DXN" }
+  ]
+}

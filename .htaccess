@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Evitar problemas si no existe archivo o carpeta
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# URLs amigables para páginas
+RewriteRule ^mi-empresa$ mi_empresa.php [L]
+RewriteRule ^oportunidad$ oportunidad.php [L]
+RewriteRule ^plan-marketing$ plan_marketing.php [L]
+RewriteRule ^salud$ salud.php [L]
+RewriteRule ^sobre-mi$ sobre_mi.php [L]
+
+# Página dinámica por serie
+RewriteRule ^productos/(.+)$ productos.php?serie=$1 [L]
