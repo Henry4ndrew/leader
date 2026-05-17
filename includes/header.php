@@ -52,11 +52,7 @@
             
             <!-- Menú desktop - padding reducido en enlaces -->
             <nav class="hidden md:flex gap-1 lg:gap-2 xl:gap-4 mx-0">
-                <a href="<?= BASE_URL ?>/" class="nav-link font-medium whitespace-nowrap text-xs md:text-sm lg:text-base">
-                    <i class="fas fa-home"></i>
-                    <span>Inicio</span>
-                </a>
-                <a href="<?= BASE_URL ?>/mi_empresa.php" class="nav-link font-medium whitespace-nowrap text-xs md:text-sm lg:text-base">
+                <a href="<?= BASE_URL ?>/mi-empresa.php" class="nav-link font-medium whitespace-nowrap text-xs md:text-sm lg:text-base">
                     <i class="fas fa-building"></i>
                     <span>Mi Empresa</span>
                 </a>
@@ -64,17 +60,17 @@
                     <i class="fas fa-rocket"></i>
                     <span>Oportunidad</span>
                 </a>
-                <a href="<?= BASE_URL ?>/plan_marketing.php" class="nav-link font-medium whitespace-nowrap text-xs md:text-sm lg:text-base">
+                <a href="<?= BASE_URL ?>/plan-marketing.php" class="nav-link font-medium whitespace-nowrap text-xs md:text-sm lg:text-base">
                     <i class="fas fa-chart-simple"></i>
-                    <span>Plan</span>
+                    <span>Plan de marketing</span>
                 </a>
                 <a href="<?= BASE_URL ?>/salud.php" class="nav-link font-medium whitespace-nowrap text-xs md:text-sm lg:text-base">
                     <i class="fas fa-heartbeat"></i>
                     <span>Salud</span>
                 </a>
-                <a href="<?= BASE_URL ?>/sobre_mi.php" class="nav-link font-medium whitespace-nowrap text-xs md:text-sm lg:text-base">
-                    <i class="fas fa-user"></i>
-                    <span>Sobre mí</span>
+                <a href="<?= BASE_URL ?>/tienda-virtual.php" class="nav-link font-medium whitespace-nowrap text-xs md:text-sm lg:text-base">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Tienda virtual</span>
                 </a>
             </nav>
             

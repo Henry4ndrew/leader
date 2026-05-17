@@ -1,12 +1,12 @@
-fideldxn/
+LEADER/
 │
 ├── .htaccess
 ├── index.php
-├── mi_empresa.php
+├── mi-empresa.php
 ├── oportunidad.php
-├── plan_marketing.php
+├── plan-marketing.php
 ├── salud.php
-├── sobre_mi.php
+├── tienda-virtual.php
 ├── productos.php            ← página dinámica (usa ?serie=)
 │
 ├── /includes/

@@ -1,15 +1,19 @@
 RewriteEngine On
 
+# 🔴 Redirigir .php → URL limpia
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.php [NC]
+RewriteRule ^ /%1 [R=301,L]
+
 # Evitar problemas si no existe archivo o carpeta
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# URLs amigables para páginas
-RewriteRule ^mi-empresa$ mi_empresa.php [L]
+# URLs amigables
+RewriteRule ^mi-empresa$ mi-empresa.php [L]
 RewriteRule ^oportunidad$ oportunidad.php [L]
-RewriteRule ^plan-marketing$ plan_marketing.php [L]
+RewriteRule ^plan-marketing$ plan-marketing.php [L]
 RewriteRule ^salud$ salud.php [L]
-RewriteRule ^sobre-mi$ sobre_mi.php [L]
+RewriteRule ^tienda-virtual$ tienda-virtual.php [L]
 
-# Página dinámica por serie
+# Página dinámica
 RewriteRule ^productos/(.+)$ productos.php?serie=$1 [L]
