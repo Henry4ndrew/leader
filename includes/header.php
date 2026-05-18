@@ -9,12 +9,12 @@
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- CSS Personalizado -->
-    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/styles.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/styles1.css">
     
     <!-- Personalizar la paleta de colores de Tailwind -->
     <script>
@@ -32,6 +32,7 @@
             }
         }
     </script>
+
 </head>
 <body class="bg-gray-50">
 

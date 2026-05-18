@@ -44,9 +44,15 @@ if (!$producto) {
     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
         <div class="md:flex">
             <!-- Imagen del producto -->
+                        <!-- Imagen del producto -->
             <div class="md:w-1/2 bg-gradient-to-br from-seccion-suave to-cian/20 p-8 flex items-center justify-center">
-                <?php if(isset($producto['imagen']) && file_exists($_SERVER['DOCUMENT_ROOT'] . $producto['imagen'])): ?>
-                    <img src="<?= htmlspecialchars($producto['imagen']) ?>" 
+                <?php 
+                $imgPath = $producto['imagen'] ?? '';
+                $fullImageUrl = BASE_URL . $imgPath;
+                $fullImagePath = $_SERVER['DOCUMENT_ROOT'] . $fullImageUrl;
+                ?>
+                <?php if(!empty($imgPath) && file_exists($fullImagePath)): ?>
+                    <img src="<?= $fullImageUrl ?>" 
                         alt="<?= htmlspecialchars($producto['nombre']) ?>"
                         class="w-full max-w-md h-auto object-contain rounded-lg shadow-xl">
                 <?php else: ?>
@@ -136,7 +142,6 @@ if (!$producto) {
 
 
 
-    <!-- Productos relacionados - Estilo moderno -->
 <!-- Productos relacionados -->
 <div class="mt-16">
     <!-- Título decorativo -->
@@ -331,8 +336,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function mostrarNotificacion(mensaje, tipo = 'success') {
         const notificacion = document.createElement('div');
         notificacion.className = `fixed top-20 right-4 z-50 px-6 py-3 rounded-lg shadow-lg text-white ${
-            tipo === 'success' ? 'bg-green-500' : 'bg-red-500'
-        } transition-opacity duration-300 flex items-center space-x-2`;
+            tipo === 'success' ? 'bg-gradient-to-r from-green-500 to-emerald-600' : 'bg-red-500'
+        } transition-all duration-300 flex items-center gap-2 animate-slide-in`;
         
         const icono = tipo === 'success' ? '<i class="fas fa-check-circle"></i>' : '<i class="fas fa-exclamation-circle"></i>';
         notificacion.innerHTML = `${icono} <span>${mensaje}</span>`;

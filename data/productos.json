@@ -4,8 +4,8 @@
       "id": "cafe-dxn-001",
       "nombre": "Café DXN",
       "descripcion": "Bebida energética natural con Ganoderma",
-      "imagen": "/assets/img/productos/cafe-dxn.jpg",
-      "precio": 25.99,
+      "imagen": "/assets/img/productos/Cafe2en1.avif",
+      "precio": null,
       "beneficios": [
         "Aumenta la energía naturalmente",
         "Mejora la concentración mental",
@@ -16,9 +16,9 @@
     {
       "id": "te-lingzhi-002",
       "nombre": "Té Lingzhi",
-      "descripcion": "Infusión saludable de hongos medicinales",
+      "descripcion": "Infusión saludable de hongos medicinales con Ganoderma Lingzhi y hierbas naturales para el bienestar general y la vitalidad",
       "imagen": "/assets/img/productos/te-lingzhi.jpg",
-      "precio": 19.99,
+      "precio": null,
       "beneficios": [
         "Fortalece el sistema inmunológico",
         "Propiedades antiinflamatorias",
@@ -33,7 +33,7 @@
       "nombre": "Té Verde DXN",
       "descripcion": "Té verde premium con extracto de Ganoderma",
       "imagen": "/assets/img/productos/te-verde.jpg",
-      "precio": 22.99,
+      "precio": null,
       "beneficios": [
         "Acelera el metabolismo",
         "Quema grasas naturalmente",
@@ -48,7 +48,7 @@
       "nombre": "Spirulina DXN",
       "descripcion": "Suplemento natural de algas",
       "imagen": "/assets/img/productos/spirulina.jpg",
-      "precio": 34.99,
+      "precio": null,
       "beneficios": [
         "Alta en proteínas y vitaminas",
         "Desintoxica el organismo",
@@ -63,7 +63,7 @@
       "nombre": "OoTea Premium",
       "descripcion": "Té premium DXN con doble fermentación",
       "imagen": "/assets/img/productos/ootea.jpg",
-      "precio": 29.99,
+      "precio": null,
       "beneficios": [
         "Mejora la circulación sanguínea",
         "Propiedades anticancerígenas",

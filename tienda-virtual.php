@@ -6,33 +6,43 @@ include 'includes/header.php';
 $serieInicial = $_GET['serie'] ?? 'bebidas';
 ?>
 
-<div class="container mx-auto p-6">
-    <h1 class="text-3xl font-bold mb-6 text-center">Tienda Virtual</h1>
+<div class="container mx-auto px-4 py-8">
+    <!-- Título decorativo -->
+    <div class="text-center mb-8">
+        <div class="flex items-center justify-center gap-2 text-azul-oscuro">
+            <i class="fas fa-store text-[1.8rem]"></i>
+            <h1 class="text-2xl md:text-3xl font-bold">
+                Tienda virtual
+            </h1>
+        </div>
+
+        <div class="w-20 h-1 bg-gradient-to-r from-cian to-indigo mx-auto mt-3 rounded-full"></div>
+    </div>
     
-    <!-- Botones de series según tu JSON -->
+    <!-- Botones de series con paleta de colores -->
     <div class="flex flex-wrap justify-center gap-3 mb-8">
-        <button class="btn-serie bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition transform hover:scale-105" data-serie="bebidas">
-            <i class="fa-solid fa-glass-water mr-2"></i> Bebidas
+        <button class="btn-serie bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md" data-serie="bebidas">
+            <i class="fas fa-glass-water mr-2"></i> Bebidas
         </button>
 
-        <button class="btn-serie bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-6 rounded-lg transition transform hover:scale-105" data-serie="te">
-            <i class="fa-solid fa-mug-hot mr-2"></i> Té
+        <button class="btn-serie bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md" data-serie="te">
+            <i class="fas fa-mug-hot mr-2"></i> Té
         </button>
 
-        <button class="btn-serie bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-6 rounded-lg transition transform hover:scale-105" data-serie="varios">
-            <i class="fa-solid fa-leaf mr-2"></i> Varios
+        <button class="btn-serie bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md" data-serie="varios">
+            <i class="fas fa-leaf mr-2"></i> Varios
         </button>
 
-        <button class="btn-serie bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-6 rounded-lg transition transform hover:scale-105" data-serie="ootea">
-            <i class="fa-solid fa-seedling mr-2"></i> OoTea
+        <button class="btn-serie bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md" data-serie="ootea">
+            <i class="fas fa-seedling mr-2"></i> OoTea
         </button>
     </div>
 
     <!-- Contenedor donde se mostrarán los productos -->
     <div id="productos-container" class="min-h-[400px]">
-        <div class="text-center text-gray-500 py-12">
-            <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-green-600"></div>
-            <p class="mt-4">Cargando productos...</p>
+        <div class="text-center py-12">
+            <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-cian"></div>
+            <p class="mt-4 text-texto">Cargando productos...</p>
         </div>
     </div>
 </div>
@@ -95,14 +105,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función para mostrar notificaciones
     function mostrarNotificacion(mensaje, tipo = 'success') {
         const notificacion = document.createElement('div');
-        notificacion.className = `fixed top-20 right-4 z-50 px-4 py-2 rounded-lg shadow-lg text-white ${
-            tipo === 'success' ? 'bg-green-500' : 'bg-red-500'
-        } transition-opacity duration-300`;
-        notificacion.textContent = mensaje;
+        notificacion.className = `fixed top-20 right-4 z-50 px-6 py-3 rounded-lg shadow-lg text-white ${
+    tipo === 'success' ? 'bg-gradient-to-r from-green-500 to-emerald-600' : 'bg-red-500'
+} transition-all duration-300 flex items-center gap-2 animate-slide-in`;
+
+const icono = tipo === 'success' 
+    ? '<i class="fas fa-check-circle"></i>' 
+    : '<i class="fas fa-exclamation-circle"></i>';
+
+notificacion.innerHTML = `${icono} <span>${mensaje}</span>`;
         document.body.appendChild(notificacion);
         
         setTimeout(() => {
             notificacion.style.opacity = '0';
+            notificacion.style.transform = 'translateX(100px)';
             setTimeout(() => notificacion.remove(), 300);
         }, 3000);
     }
