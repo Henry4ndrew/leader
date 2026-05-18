@@ -14,6 +14,10 @@ RewriteRule ^oportunidad$ oportunidad.php [L]
 RewriteRule ^plan-marketing$ plan-marketing.php [L]
 RewriteRule ^salud$ salud.php [L]
 RewriteRule ^tienda-virtual$ tienda-virtual.php [L]
+RewriteRule ^carrito$ carrito.php [L]
 
 # Página dinámica
 RewriteRule ^productos/(.+)$ productos.php?serie=$1 [L]
+
+# Página de detalle de producto
+RewriteRule ^producto/([a-zA-Z0-9_-]+)$ detalle-producto.php?id=$1 [L]

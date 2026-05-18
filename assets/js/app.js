@@ -88,3 +88,75 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+
+
+
+
+
+
+
+// Funciones globales para el carrito
+window.agregarAlCarrito = function(productoData) {
+    let carrito = JSON.parse(localStorage.getItem('carrito') || '[]');
+    
+    // Verificar si el producto ya existe en el carrito
+    const existeIndex = carrito.findIndex(item => item.id === productoData.id);
+    
+    if (existeIndex !== -1) {
+        // Incrementar cantidad
+        carrito[existeIndex].cantidad += 1;
+    } else {
+        // Agregar nuevo producto
+        productoData.cantidad = 1;
+        carrito.push(productoData);
+    }
+    
+    // Guardar en localStorage
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    
+    // Mostrar notificación
+    mostrarNotificacion(`${productoData.nombre} agregado al carrito`, 'success');
+    
+    // Actualizar contador del carrito
+    actualizarContadorCarrito();
+};
+
+window.mostrarNotificacion = function(mensaje, tipo = 'success') {
+    const notificacion = document.createElement('div');
+    notificacion.className = `fixed top-20 right-4 z-50 px-6 py-3 rounded-lg shadow-lg text-white ${
+        tipo === 'success' ? 'bg-green-500' : 'bg-red-500'
+    } transition-opacity duration-300 flex items-center space-x-2`;
+    
+    const icono = tipo === 'success' ? '<i class="fas fa-check-circle"></i>' : '<i class="fas fa-exclamation-circle"></i>';
+    notificacion.innerHTML = `${icono} <span>${mensaje}</span>`;
+    
+    document.body.appendChild(notificacion);
+    
+    setTimeout(() => {
+        notificacion.style.opacity = '0';
+        setTimeout(() => notificacion.remove(), 300);
+    }, 3000);
+};
+
+window.actualizarContadorCarrito = function() {
+    const carrito = JSON.parse(localStorage.getItem('carrito') || '[]');
+    const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+    const contador = document.getElementById('cart-counter');
+    
+    if (contador) {
+        if (totalItems > 0) {
+            contador.textContent = totalItems;
+            contador.classList.remove('hidden');
+        } else {
+            contador.classList.add('hidden');
+            contador.textContent = '0';
+        }
+    }
+};
+
+// Inicializar contador al cargar la página
+document.addEventListener('DOMContentLoaded', function() {
+    actualizarContadorCarrito();
+});

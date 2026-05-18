@@ -1,14 +1,75 @@
 {
   "bebidas": [
-    { "nombre": "Café DXN", "descripcion": "Bebida energética natural" }
+    {
+      "id": "cafe-dxn-001",
+      "nombre": "Café DXN",
+      "descripcion": "Bebida energética natural con Ganoderma",
+      "imagen": "/assets/img/productos/cafe-dxn.jpg",
+      "precio": 25.99,
+      "beneficios": [
+        "Aumenta la energía naturalmente",
+        "Mejora la concentración mental",
+        "Rico en antioxidantes",
+        "Ayuda a la digestión"
+      ]
+    },
+    {
+      "id": "te-lingzhi-002",
+      "nombre": "Té Lingzhi",
+      "descripcion": "Infusión saludable de hongos medicinales",
+      "imagen": "/assets/img/productos/te-lingzhi.jpg",
+      "precio": 19.99,
+      "beneficios": [
+        "Fortalece el sistema inmunológico",
+        "Propiedades antiinflamatorias",
+        "Mejora la calidad del sueño",
+        "Reduce el estrés"
+      ]
+    }
   ],
   "te": [
-    { "nombre": "Té Lingzhi", "descripcion": "Infusión saludable" }
+    {
+      "id": "te-verde-003",
+      "nombre": "Té Verde DXN",
+      "descripcion": "Té verde premium con extracto de Ganoderma",
+      "imagen": "/assets/img/productos/te-verde.jpg",
+      "precio": 22.99,
+      "beneficios": [
+        "Acelera el metabolismo",
+        "Quema grasas naturalmente",
+        "Alta concentración de antioxidantes",
+        "Mejora la salud cardiovascular"
+      ]
+    }
   ],
   "varios": [
-    { "nombre": "Spirulina", "descripcion": "Suplemento natural" }
+    {
+      "id": "spirulina-004",
+      "nombre": "Spirulina DXN",
+      "descripcion": "Suplemento natural de algas",
+      "imagen": "/assets/img/productos/spirulina.jpg",
+      "precio": 34.99,
+      "beneficios": [
+        "Alta en proteínas y vitaminas",
+        "Desintoxica el organismo",
+        "Aumenta la energía",
+        "Fortalece el sistema inmune"
+      ]
+    }
   ],
   "ootea": [
-    { "nombre": "OoTea", "descripcion": "Té premium DXN" }
+    {
+      "id": "ootea-005",
+      "nombre": "OoTea Premium",
+      "descripcion": "Té premium DXN con doble fermentación",
+      "imagen": "/assets/img/productos/ootea.jpg",
+      "precio": 29.99,
+      "beneficios": [
+        "Mejora la circulación sanguínea",
+        "Propiedades anticancerígenas",
+        "Regula la presión arterial",
+        "Anti-envejecimiento natural"
+      ]
+    }
   ]
 }

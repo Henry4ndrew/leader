@@ -86,10 +86,27 @@
                 </button>
             </div>
             
-            <!-- Botón menú móvil -->
-            <button class="md:hidden menu-btn text-white text-lg sm:text-xl focus:outline-none z-20 relative" id="menuBtn" aria-label="Menú">
-                <i class="fas fa-bars"></i>
-            </button>
+            
+
+
+
+            <div class="flex items-center space-x-4">
+                <!-- Carrito de compras -->
+                <a href="<?= BASE_URL ?>/carrito" class="relative text-gray-700 hover:text-green-600 transition">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                    <span id="cart-counter" class="hidden absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5 min-w-[18px] text-center">
+                        0
+                    </span>
+                </a>
+
+                <!-- Botón menú móvil -->
+                <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+
+
         </div>
         
         <!-- Menú móvil -->
