@@ -1,74 +1,584 @@
 {
   "bebidas": [
     {
-      "id": "cafe-dxn-001",
-      "nombre": "Café DXN",
-      "descripcion": "Bebida energética natural con Ganoderma",
+      "id": "cafe-negro-2en1",
+      "nombre": "CAFÉ NEGRO 2EN1",
+      "descripcion": "Café energizante que desintoxica y oxigena el organismo",
       "imagen": "/assets/img/productos/Cafe2en1.avif",
       "precio": null,
       "beneficios": [
-        "Aumenta la energía naturalmente",
-        "Mejora la concentración mental",
-        "Rico en antioxidantes",
-        "Ayuda a la digestión"
+        "Desintoxica el organismo",
+        "Oxigena la sangre",
+        "Ayuda a mantener una constitución joven",
+        "Poderoso energizante"
       ]
     },
     {
-      "id": "te-lingzhi-002",
-      "nombre": "Té Lingzhi",
-      "descripcion": "Infusión saludable de hongos medicinales con Ganoderma Lingzhi y hierbas naturales para el bienestar general y la vitalidad",
-      "imagen": "/assets/img/productos/te-lingzhi.jpg",
+      "id": "cafe-con-leche-3en1",
+      "nombre": "CAFÉ CON LECHE 3EN1",
+      "descripcion": "Café que fortalece el sistema inmunológico y reduce la fatiga",
+      "imagen": "/assets/img/productos/Cafe3en1.avif",
       "precio": null,
       "beneficios": [
         "Fortalece el sistema inmunológico",
-        "Propiedades antiinflamatorias",
-        "Mejora la calidad del sueño",
-        "Reduce el estrés"
+        "Promueve la oxigenación corporal",
+        "Ayuda a combatir los radicales libres",
+        "Reduce la fatiga"
       ]
-    }
-  ],
-  "te": [
+    },
     {
-      "id": "te-verde-003",
-      "nombre": "Té Verde DXN",
-      "descripcion": "Té verde premium con extracto de Ganoderma",
-      "imagen": "/assets/img/productos/te-verde.jpg",
+      "id": "cocozhi",
+      "nombre": "COCOZHI",
+      "descripcion": "Bebida ideal para niños, bebés y mujeres embarazadas",
+      "imagen": "/assets/img/productos/Cocozhi.avif",
       "precio": null,
       "beneficios": [
-        "Acelera el metabolismo",
-        "Quema grasas naturalmente",
-        "Alta concentración de antioxidantes",
-        "Mejora la salud cardiovascular"
+        "Ayuda al desarrollo y crecimiento de los niños",
+        "Ayuda a la oxigenación cerebral",
+        "Ideal para bebés, niños, mujeres embarazadas",
+        "Inhibe los radicales libres"
+      ]
+    },
+    {
+      "id": "vita-cafe-6en1",
+      "nombre": "VITA CAFÉ 6EN1",
+      "descripcion": "Café que reduce grasa corporal y aumenta la potencia sexual",
+      "imagen": "/assets/img/productos/VitaCafe.avif",
+      "precio": null,
+      "beneficios": [
+        "Reduce la grasa corporal",
+        "Aumenta la potencia sexual",
+        "Controla los síntomas de menopausia y andropausia",
+        "Incrementa la capacidad de resistencia al estrés"
+      ]
+    },
+    {
+      "id": "white-coffee-zhino",
+      "nombre": "WHITE COFFEE ZHINO",
+      "descripcion": "Bebida nutritiva que equilibra las funciones del organismo",
+      "imagen": "/assets/img/productos/WhiteCoffeeZhino.avif",
+      "precio": null,
+      "beneficios": [
+        "Bebida nutritiva para niños y personas con deficiente nutrición",
+        "Equilibra las funciones del organismo",
+        "Incrementa el sistema inmunológico",
+        "Desintoxica, regenera y equilibra"
+      ]
+    },
+    {
+      "id": "zhi-mocha",
+      "nombre": "ZHI MOCHA",
+      "descripcion": "Bebida que regenera, equilibra y oxigena las neuronas",
+      "imagen": "/assets/img/productos/ZhiMocha.avif",
+      "precio": null,
+      "beneficios": [
+        "Aumenta la inmunidad del organismo",
+        "Regenera, equilibra y rejuvenece",
+        "Oxigena las neuronas",
+        "Ayuda a equilibrar los sistemas del organismo"
+      ]
+    },
+    {
+      "id": "zhi-cafe",
+      "nombre": "ZHI CAFÉ",
+      "descripcion": "Café tostado con aroma especial, energizante natural",
+      "imagen": "/assets/img/productos/ZhiCafe.avif",
+      "precio": null,
+      "beneficios": [
+        "Perfecto para degustar el sabor del café",
+        "Energizante natural",
+        "Café tostado con un aroma especial",
+        "Ideal para tomarlo en el ejercicio matutino"
+      ]
+    },
+    {
+      "id": "nutrizhi",
+      "nombre": "NUTRIZHI",
+      "descripcion": "Nutrición completa con proteína y colágeno",
+      "imagen": "/assets/img/productos/NutrizhiBolsa.avif",
+      "precio": null,
+      "beneficios": [
+        "Proporciona nutrición completa y equilibrada",
+        "Nutre los huesos",
+        "Fortalece el sistema inmunológico",
+        "Fuente de proteína y colágeno"
+      ]
+    },
+    {
+      "id": "cordyceps-cereal",
+      "nombre": "CORDYCEPS CEREAL",
+      "descripcion": "Cereal que fortalece riñones y aumenta el vigor sexual",
+      "imagen": "/assets/img/productos/CordycepsCereal.avif",
+      "precio": null,
+      "beneficios": [
+        "Fortalece los riñones",
+        "Aumenta el vigor sexual",
+        "Ayuda en el rendimiento y recuperación en atletas",
+        "Ayuda en problemas respiratorios"
+      ]
+    },
+    {
+      "id": "spirulina-cereal",
+      "nombre": "SPIRULINA CEREAL",
+      "descripcion": "Cereal rico en proteínas y hierro para vista y piel sana",
+      "imagen": "/assets/img/productos/Spirulina.avif",
+      "precio": null,
+      "beneficios": [
+        "Buenas para la vista",
+        "Son ricas en proteínas de gran calidad",
+        "Cubren la necesidad diaria de hierro",
+        "Conservan la piel joven y el cabello sano"
+      ]
+    },
+    {
+      "id": "civattino-coffee",
+      "nombre": "CIVATTINO COFFEE",
+      "descripcion": "Café con propiedades antibacterianas y digestivas",
+      "imagen": "/assets/img/productos/GroundCoffee.avif",
+      "precio": null,
+      "beneficios": [
+        "Tiene propiedades antibacterianas",
+        "Ayuda a la digestión",
+        "Disminuye el dolor muscular",
+        "Ayuda a nivelar la glucosa"
+      ]
+    },
+    {
+      "id": "crema-no-lactea",
+      "nombre": "CREMA NO LÁCTEA",
+      "descripcion": "Crema no láctea fácil de disolver para mezclar con tus productos DXN",
+      "imagen": "/assets/img/productos/NonDaryCreamer.avif",
+      "precio": null,
+      "beneficios": [
+        "Agradable sabor a leche",
+        "Fácil de disolver",
+        "Crema no láctea",
+        "Ideal para mezclar con tu producto DXN favorito"
       ]
     }
   ],
+
+
+
+
+
+  "te": [
+      {
+        "id": "oolong-tea-powder",
+        "nombre": "OOLONG TEA POWDER",
+        "descripcion": "Té que regula la presión arterial y apoya la salud digestiva",
+        "imagen": "/assets/img/productos/OolongTea.avif",
+        "precio": null,
+        "beneficios": [
+          "Regula la presión arterial",
+          "Apoya la salud digestiva",
+          "Reduce la inflamación vascular",
+          "Ayuda a controlar el peso corporal"
+        ]
+      },
+      {
+        "id": "tea-latte",
+        "nombre": "TEA LATTE",
+        "descripcion": "Bebida ideal para bajar de peso y controlar el estrés",
+        "imagen": "/assets/img/productos/TeaLatte.avif",
+        "precio": null,
+        "beneficios": [
+          "Ideal para bajar de peso",
+          "Mejora la oxigenación sanguínea",
+          "Ideal para controlar el estrés",
+          "Fortalece los huesos"
+        ]
+      },
+      {
+        "id": "zhi-tea",
+        "nombre": "ZHI TEA",
+        "descripcion": "Té antioxidante que reduce el colesterol y combate infecciones",
+        "imagen": "/assets/img/productos/ZhiTea.avif",
+        "precio": null,
+        "beneficios": [
+          "Reduce el colesterol",
+          "Ayuda a bajar de peso",
+          "Combate infecciones",
+          "Poderoso antioxidante"
+        ]
+      },
+      {
+        "id": "te-de-spica",
+        "nombre": "TÉ DE SPICA",
+        "descripcion": "Té que aclara la visión y ayuda con problemas estomacales",
+        "imagen": "/assets/img/productos/TeSpica.avif",
+        "precio": null,
+        "beneficios": [
+          "Aclara la visión",
+          "Baja la fiebre",
+          "Problemas del estómago",
+          "Reduce ojeras"
+        ]
+      },
+      {
+        "id": "oozhi-tea",
+        "nombre": "OOZHI TEA",
+        "descripcion": "Té relajante que desintoxica el cuerpo y promueve la juventud",
+        "imagen": "/assets/img/productos/OozhiTea.avif",
+        "precio": null,
+        "beneficios": [
+          "Relaja el organismo",
+          "Desintoxica el cuerpo",
+          "Ayuda a la digestión del cuerpo",
+          "Promueve la juventud"
+        ]
+      }
+  ],
+
+
+
+
+
   "varios": [
     {
-      "id": "spirulina-004",
-      "nombre": "Spirulina DXN",
-      "descripcion": "Suplemento natural de algas",
-      "imagen": "/assets/img/productos/spirulina.jpg",
+      "id": "azucar-dxn",
+      "nombre": "AZÚCAR DXN",
+      "descripcion": "Azúcar blanca granulada en porciones individuales para té y café",
+      "imagen": "/assets/img/productos/Sugar.avif",
       "precio": null,
       "beneficios": [
-        "Alta en proteínas y vitaminas",
-        "Desintoxica el organismo",
-        "Aumenta la energía",
-        "Fortalece el sistema inmune"
+        "Mantiene el sabor natural del té y café",
+        "Azúcar blanca granulada",
+        "Se divide en porciones individuales para mayor comodidad e higiene",
+        "Fácil de utilizar y llevar"
+      ]
+    },
+    {
+      "id": "lemonzhi-limonada-dxn",
+      "nombre": "LEMONZHI - LIMONADA DXN",
+      "descripcion": "Refrescante limonada con extractos de Ganoderma lucidum",
+      "imagen": "/assets/img/productos/Lemonzhi.avif",
+      "precio": null,
+      "beneficios": [
+        "Refrescante y con sabor a limón",
+        "Contiene extractos de Ganoderma lucidum",
+        "Puede complementar una dieta balanceada",
+        "Sin colorantes ni conservantes artificiales"
+      ]
+    },
+    {
+      "id": "morinzhi",
+      "nombre": "MORINZHI",
+      "descripcion": "Suplemento que estabiliza la glucosa y mejora la digestión",
+      "imagen": "/assets/img/productos/Morinzhi.avif",
+      "precio": null,
+      "beneficios": [
+        "Estabiliza los niveles de glucosa",
+        "Mejora la digestión",
+        "Ayuda en estados depresivos",
+        "Estabiliza la presión arterial"
+      ]
+    },
+    {
+      "id": "morinzyme",
+      "nombre": "MORINZYME",
+      "descripcion": "Enzimas que ayudan a superar adicciones y mejoran el sistema inmune",
+      "imagen": "/assets/img/productos/Morinzyme.avif",
+      "precio": null,
+      "beneficios": [
+        "Ayuda a superar adicciones",
+        "Mejora el sistema inmune",
+        "Mejora la piel",
+        "Alivia inflamaciones"
+      ]
+    },
+    {
+      "id": "zhi-mint-plus",
+      "nombre": "ZHI MINT PLUS",
+      "descripcion": "Menta que actúa como expectorante y descongestionante nasal",
+      "imagen": "/assets/img/productos/ZhiMint.avif",
+      "precio": null,
+      "beneficios": [
+        "Expectorante",
+        "Descongestionante nasal",
+        "Mantiene el aliento fresco",
+        "Ayuda en caso de inflamación de encías"
+      ]
+    },
+    {
+      "id": "aceite-de-coco-vco-l",
+      "nombre": "ACEITE DE COCO VCO-L 285ml",
+      "descripcion": "Aceite de coco para salud cardiovascular y hidratación de la piel",
+      "imagen": "/assets/img/productos/AceiteCoco.avif",
+      "precio": null,
+      "beneficios": [
+        "Promueve la salud cardiovascular y colesterol saludable",
+        "Apoya la absorción de nutrientes",
+        "Proporciona propiedades antimicrobianas por su ácido láurico",
+        "Hidrata la piel, manteniéndola suave",
+        "Aumenta la energía y vitalidad"
+      ]
+    },
+    {
+      "id": "fideos-dxn",
+      "nombre": "FIDEOS DXN",
+      "descripcion": "Fideos bajos en grasa y fáciles de digerir",
+      "imagen": "/assets/img/productos/descfideosganoSP.avif",
+      "precio": null,
+      "beneficios": [
+        "Nutrientes Adicionales",
+        "Bajo en Grasa",
+        "Fácil de Preparar",
+        "Fáciles de Digerir"
+      ]
+    },
+    {
+      "id": "dxn-mycoveggie",
+      "nombre": "DXN MYCOVEGGIE",
+      "descripcion": "Suplemento rico en clorofila, fibra y proteína vegetal",
+      "imagen": "/assets/img/productos/Mycoveggie.avif",
+      "precio": null,
+      "beneficios": [
+        "Ideal para bajar de peso",
+        "Fortalece el sistema inmunológico",
+        "Alta en clorofila, fibra, proteína vegetal, vitaminas y minerales",
+        "Regula el sueño"
+      ]
+    },
+    {
+      "id": "sistema-de-agua-dxn",
+      "nombre": "SISTEMA DE AGUA DXN",
+      "descripcion": "Sistema de purificación que elimina bacterias y mejora el sabor del agua",
+      "imagen": "/assets/img/productos/SistemaAgua.avif",
+      "precio": null,
+      "beneficios": [
+        "Elimina las bacterias del agua que causan enfermedades",
+        "Mejora sabor, olor, quita el cloro, insecticidas, detergentes y otros",
+        "Elimina radicales libres",
+        "Activa y oxigena el agua"
+      ]
+    },
+    {
+      "id": "otg-mug-taza",
+      "nombre": "OTG MUG (TAZA)",
+      "descripcion": "Taza térmica de acero inoxidable que mantiene bebidas calientes o frías",
+      "imagen": "/assets/img/productos/OtgMUG.avif",
+      "precio": null,
+      "beneficios": [
+        "Interior de acero inoxidable de grado alimenticio 304",
+        "Sello hermético, resistente a las fugas",
+        "Mantiene las bebidas calientes o frías hasta 8 Hrs",
+        "Conserva el sabor y la frescura de las bebidas"
+      ]
+    },
+    {
+      "id": "olla-a-presion-dxn",
+      "nombre": "OLLA A PRESIÓN DXN",
+      "descripcion": "Olla de acero inoxidable que acorta el tiempo de cocción",
+      "imagen": "/assets/img/productos/OllaPresion.avif",
+      "precio": null,
+      "beneficios": [
+        "Hecha de acero inoxidable de calidad alimentaria SUS 304 de alta calidad",
+        "Acorta el tiempo de cocción mediante el uso de vapor",
+        "Es adecuada para todo tipo de fuentes de cocción",
+        "Es fácil de usar y limpiar"
+      ]
+    },
+    {
+      "id": "gl-powder",
+      "nombre": "GL POWDER",
+      "descripcion": "Polvo que fortalece la resistencia y regenera células y tejidos",
+      "imagen": "/assets/img/productos/GL.avif",
+      "precio": null,
+      "beneficios": [
+        "Fortalece la resistencia del cuerpo",
+        "Gran regulador",
+        "Ayuda a regenerar las células y tejidos del cuerpo",
+        "Proporciona flexibilidad en términos de calidad de porción"
+      ]
+    },
+    {
+      "id": "rg-powder",
+      "nombre": "RG POWDER",
+      "descripcion": "Polvo desintoxicante que normaliza las funciones del cuerpo",
+      "imagen": "/assets/img/productos/RG.avif",
+      "precio": null,
+      "beneficios": [
+        "Ayuda a desintoxicar",
+        "Proporciona flexibilidad",
+        "Ayuda a normalizar las funciones del cuerpo",
+        "Regula y limpia el organismo"
+      ]
+    },
+    {
+      "id": "infusor-de-te",
+      "nombre": "INFUSOR DE TÉ",
+      "descripcion": "Infusor de vidrio borosilicato con infusor de acero inoxidable",
+      "imagen": "/assets/img/productos/InfusorTe.avif",
+      "precio": null,
+      "beneficios": [
+        "Se usa para remojar, colar y servir té de una manera más fácil",
+        "Recipiente y tapa hechos de vidrio borosilicato resistente",
+        "Infusor hecho de acero inoxidable",
+        "Ideal para preparar el té en casa o la oficina"
+      ]
+    },
+    {
+      "id": "dxn-kimono",
+      "nombre": "DXN KIMONO",
+      "descripcion": "Kimono de algodón suave y absorbente con diseño exclusivo DXN",
+      "imagen": "/assets/img/productos/Kimono.avif",
+      "precio": null,
+      "beneficios": [
+        "Hecha de algodón",
+        "Suave, Absorvente, Respirable",
+        "Diseño exclusivo con el logo DXN",
+        "Tallas disponibles: s, m, l, xl, xxl"
+      ]
+    },
+    {
+      "id": "kit-basico-material",
+      "nombre": "KIT BÁSICO (MATERIAL)",
+      "descripcion": "Kit para comenzar el negocio DXN con 40% de descuento",
+      "imagen": "/assets/img/productos/Kit.avif",
+      "precio": null,
+      "beneficios": [
+        "Te permite comenzar el negocio DXN",
+        "40% de descuento en todos los productos DXN",
+        "Información valiosa de nuestra compañía",
+        "Contiene: Libro, CD y sticker DXN"
+      ]
+    },
+    {
+      "id": "kit-premium-material-cafe-3en1",
+      "nombre": "KIT PREMIUM (MATERIAL+CAFÉ 3EN1)",
+      "descripcion": "Kit premium con café 3en1 para comenzar el negocio DXN",
+      "imagen": "/assets/img/productos/Kit3en1.avif",
+      "precio": null,
+      "beneficios": [
+        "Te permite comenzar el negocio DXN",
+        "40% de descuento en todos los productos DXN",
+        "Información valiosa de nuestra compañía",
+        "Contiene: Lingzhi coffee 3en1, Libro, CD y sticker DXN"
       ]
     }
   ],
+
+
+
+
+
   "ootea": [
     {
-      "id": "ootea-005",
-      "nombre": "OoTea Premium",
-      "descripcion": "Té premium DXN con doble fermentación",
-      "imagen": "/assets/img/productos/ootea.jpg",
+      "id": "oocha",
+      "nombre": "OOCHA",
+      "descripcion": "Té que previene el cáncer y favorece la salud pulmonar",
+      "imagen": "/assets/img/productos/TeOocha.avif",
       "precio": null,
       "beneficios": [
-        "Mejora la circulación sanguínea",
-        "Propiedades anticancerígenas",
-        "Regula la presión arterial",
-        "Anti-envejecimiento natural"
+        "Previene el cáncer",
+        "Favorece a los pulmones",
+        "Regula el colesterol",
+        "Combate efectos alcohólicos"
+      ]
+    },
+    {
+      "id": "ootea-cordyceps-coffee-mix-3en1",
+      "nombre": "OOTEA CORDYCEPS COFFEE MIX 3EN1",
+      "descripcion": "Café con cordyceps que eleva las defensas y mejora la potencia sexual",
+      "imagen": "/assets/img/productos/OoteaCordycepsCoffeeMix.avif",
+      "precio": null,
+      "beneficios": [
+        "Eleva las defensas",
+        "Mejora la potencia sexual",
+        "Ideal para deportistas",
+        "Mejora la circulación en la sangre"
+      ]
+    },
+    {
+      "id": "ootea-eu-cafe-mix",
+      "nombre": "OOTEA EU CAFÉ MIX",
+      "descripcion": "Café antioxidante que reduce el colesterol y ayuda a bajar de peso",
+      "imagen": "/assets/img/productos/OoteaEuCafeMix.avif",
+      "precio": null,
+      "beneficios": [
+        "Reduce el colesterol",
+        "Ayuda a bajar de peso",
+        "Ayuda a combatir infecciones",
+        "Antioxidante para tu cuerpo"
+      ]
+    },
+    {
+      "id": "ootea-zhi-mocha-mix",
+      "nombre": "OOTEA ZHI MOCHA MIX",
+      "descripcion": "Mocha que mejora la concentración mental y proporciona energía",
+      "imagen": "/assets/img/productos/OoteaZhiMocha.avif",
+      "precio": null,
+      "beneficios": [
+        "Ayuda a mejorar la concentración mental",
+        "Proporciona energía y vitalidad durante el día",
+        "Contiene antioxidantes que ayudan a combatir el estrés oxidativo",
+        "Apoya la salud general y el bienestar"
+      ]
+    },
+    {
+      "id": "ootea-lingzhi-black-coffee-mix",
+      "nombre": "OOTEA LINGZHI BLACK COFFEE MIX",
+      "descripcion": "Café negro que reduce la grasa corporal y aumenta la inmunidad",
+      "imagen": "/assets/img/productos/OoteaBlackCoffeeMix.avif",
+      "precio": null,
+      "beneficios": [
+        "Reduce la grasa corporal",
+        "Aumenta la inmunidad del organismo",
+        "Combate los radicales libres",
+        "Mejora la circulación en la sangre"
+      ]
+    },
+    {
+      "id": "ootea-lingzhi-coffee-mix-2en1",
+      "nombre": "OOTEA LINGZHI COFFEE MIX 2EN1",
+      "descripcion": "Café que promueve la oxigenación y reduce la fatiga",
+      "imagen": "/assets/img/productos/OoteaCoffeeMix2en1.avif",
+      "precio": null,
+      "beneficios": [
+        "Promueve la oxigenación del cuerpo",
+        "Ayuda a combatir los radicales libres",
+        "Reduce la fatiga",
+        "Fortalece las defensas"
+      ]
+    },
+    {
+      "id": "ootea-lingzhi-coffee-mix-3en1",
+      "nombre": "OOTEA LINGZHI COFFEE MIX 3EN1",
+      "descripcion": "Café antioxidante que reduce el colesterol y combate infecciones",
+      "imagen": "/assets/img/productos/OoteaCoffeeMix3en1.avif",
+      "precio": null,
+      "beneficios": [
+        "Reduce el colesterol",
+        "Ayuda a bajar de peso",
+        "Ayuda a combatir infecciones",
+        "Antioxidante para tu cuerpo"
+      ]
+    },
+    {
+      "id": "ootea-lingzhi-coffee-mix-3en1-lite",
+      "nombre": "OOTEA LINGZHI COFFEE MIX 3EN1 LITE",
+      "descripcion": "Café ligero que relaja, desintoxica y promueve la juventud",
+      "imagen": "/assets/img/productos/Ootea3en1Lite.avif",
+      "precio": null,
+      "beneficios": [
+        "Relaja el organismo",
+        "Desintoxica el cuerpo",
+        "Ayuda la digestión del cuerpo",
+        "Promueve la juventud"
+      ]
+    },
+    {
+      "id": "ootea-vita-cafe-mix",
+      "nombre": "OOTEA VITA CAFE MIX",
+      "descripcion": "Café que reduce grasa corporal y aumenta la potencia sexual",
+      "imagen": "/assets/img/productos/OoteaVitaCafe.avif",
+      "precio": null,
+      "beneficios": [
+        "Reduce la grasa corporal",
+        "Aumenta la potencia sexual",
+        "Controla los síntomas de la menopausia y andropausia",
+        "Incrementa la resistencia al estrés"
       ]
     }
   ]
