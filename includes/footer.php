@@ -136,14 +136,6 @@ $cta_version = getCTAVersion();
                         </div>
                     </a>
                     
-                    <!-- Botón Unirme a DXN -->
-                    <a href="https://eworld.dxn2u.com/index.php?r=account/register&mc=<?= DXN_CODE ?>&dlang=es-ES"
-                       target="_blank"
-                       class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all duration-300 text-sm">
-                        <i class="fas fa-user-plus text-xs"></i>
-                        <span>Unirme a DXN</span>
-                    </a>
-                    
                     <!-- Descripción -->
                     <p class="text-base text-cyan-100 max-w-sm mx-auto md:mx-0">
                         Productos naturales con Ganoderma, calidad y confianza para tu bienestar.

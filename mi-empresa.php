@@ -282,7 +282,7 @@ include 'includes/header.php';
         </div>
         
         <div class="flex justify-center mb-8">
-            <img src="<?= BASE_URL ?>/assets/img/logoDXN.avif" 
+            <img src="<?= BASE_URL ?>/assets/img/logoDXN-color.avif" 
                  alt="Logo DXN" 
                  class="w-48 h-48 object-contain">
         </div>

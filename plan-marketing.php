@@ -317,7 +317,7 @@ include 'includes/header.php';
                         ['nombre' => 'Mauricio', 'bandera' => 'BanderaMauricio.avif', 'link' => 'https://drive.google.com/uc?export=download&id=1cDtr8T0RObk5dT22aLDbd3ybhmAd0juC'],
                         ['nombre' => 'Kenia', 'bandera' => 'BanderaKenia.avif', 'link' => 'https://drive.google.com/uc?export=download&id=18XDfuipaw4ytlCyUWxESepS4EVPzc0Ow'],
                         ['nombre' => 'Nigeria', 'bandera' => 'BanderaNigeria.webp', 'link' => 'https://drive.google.com/uc?export=download&id=1lTTDhYDf0PDTMFSaPANqJ3W6xDDh3CCg'],
-                        ['nombre' => 'Francia', 'bandera' => 'BanderaFrancia.avif', 'link' => 'https://drive.google.com/uc?export=download&id=1pMWmg3AEw4-kAVzK5izxDSn8PejGYn-J'],
+                        ['nombre' => 'Francia', 'bandera' => 'BanderaFrancia.webp', 'link' => 'https://drive.google.com/uc?export=download&id=1pMWmg3AEw4-kAVzK5izxDSn8PejGYn-J'],
                         ['nombre' => 'Grecia', 'bandera' => 'BanderaGrecia.avif', 'link' => 'https://drive.google.com/uc?export=download&id=16S1BusKce4PH5g9JnfbULk-F5DpEKAzT'],
                         ['nombre' => 'Hong Kong', 'bandera' => 'BanderaHongKong.avif', 'link' => 'https://drive.google.com/uc?export=download&id=1f-SziP0WkoMdS6IF4cJFBOCfbKJJM_dh'],
                         ['nombre' => 'Hungría', 'bandera' => 'BanderaHungria.avif', 'link' => 'https://drive.google.com/uc?export=download&id=1Ybox8cfezTzT9XpMS-nXC7TFTDmHLBbX'],
@@ -359,34 +359,7 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- ========================================
-     SECCIÓN: LLAMADA A LA ACCIÓN
-     ======================================== -->
-<section class="py-16 bg-gradient-to-r from-azul-oscuro via-indigo to-cian">
-    <div class="container mx-auto px-4 text-center">
-        <i class="fas fa-chart-line text-5xl text-white/80 mb-4"></i>
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-            ¿Listo para empezar tu negocio?
-        </h2>
-        <p class="text-white/90 text-lg mb-6 max-w-2xl mx-auto">
-            Únete a DXN y comienza a generar ingresos mientras ayudas a otros a mejorar su salud
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://eworld.dxn2u.com/index.php?r=account/register&mc=<?= DXN_CODE ?>&dlang=es-ES" 
-               target="_blank"
-               class="inline-flex items-center gap-2 bg-white text-azul-oscuro px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <i class="fas fa-user-plus"></i>
-                <span>Afiliarme ahora</span>
-                <i class="fas fa-arrow-right"></i>
-            </a>
-            <a href="<?= BASE_URL ?>/tienda-virtual" 
-               class="inline-flex items-center gap-2 border-2 border-white text-white hover:bg-white/10 px-6 py-3 rounded-lg font-semibold transition-all duration-300">
-                <i class="fas fa-store"></i>
-                <span>Conocer productos</span>
-            </a>
-        </div>
-    </div>
-</section>
+
 
 <!-- Script para el carrusel -->
 <script>

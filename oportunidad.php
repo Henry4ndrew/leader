@@ -326,42 +326,7 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- ========================================
-     SECCIÓN: AFILIACIÓN (BANNER)
-     ======================================== -->
-<section class="py-16 bg-gradient-to-r from-azul-oscuro via-indigo to-cian">
-    <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div class="text-center md:text-left">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-                    ¡Afiliación Gratuita!
-                </h2>
-                <p class="text-white/90 text-lg mb-6">
-                    Obtén tu código DXN y comienza tu camino al éxito
-                </p>
-                <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-                    <a href="https://eworld.dxn2u.com/index.php?r=account/register&mc=<?= DXN_CODE ?>&dlang=es-ES" 
-                       target="_blank"
-                       class="inline-flex items-center gap-2 bg-white text-azul-oscuro px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                        <i class="fas fa-user-plus"></i>
-                        <span>Registrarme ahora</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="<?= BASE_URL ?>/tienda-virtual" 
-                       class="inline-flex items-center gap-2 border-2 border-white text-white hover:bg-white/10 px-6 py-3 rounded-lg font-semibold transition-all duration-300">
-                        <i class="fas fa-store"></i>
-                        <span>Conocer productos</span>
-                    </a>
-                </div>
-            </div>
-            <div>
-                <img src="<?= BASE_URL ?>/assets/img/dxnAfiliate.avif" 
-                     alt="Afíliate a DXN"
-                     class="w-64 h-64 object-contain">
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <!-- Estilos adicionales -->
 <style>
