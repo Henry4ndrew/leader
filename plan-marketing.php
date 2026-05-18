@@ -2,9 +2,6 @@
 include 'includes/header.php'; 
 ?>
 
-<!-- ========================================
-     SECCIÓN HERO - PLAN DE MARKETING
-     ======================================== -->
 <section class="relative overflow-hidden bg-gradient-to-br from-white to-gray-50">
     <div class="container mx-auto px-4 py-8 md:py-12 lg:py-16">
         <div class="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
@@ -16,7 +13,7 @@ include 'includes/header.php';
                     <span class="text-xs font-semibold text-azul-oscuro tracking-wide">OPORTUNIDAD DE NEGOCIO</span>
                 </div>
                 
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6 efect1">
                     <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                         Plan de
                     </span>
@@ -39,12 +36,12 @@ include 'includes/header.php';
                 
                 <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
                     <a href="#bonos" 
-                       class="group bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 text-sm md:text-base">
+                       class="group bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 text-sm md:text-base efect3">
                         <span>Conocer bonos</span>
                         <i class="fas fa-arrow-down group-hover:translate-y-1 transition-transform"></i>
                     </a>
                     <a href="#descargas" 
-                       class="border-2 border-indigo text-indigo hover:bg-indigo hover:text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base">
+                       class="border-2 border-indigo text-indigo hover:bg-indigo hover:text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base efect3">
                         <i class="fas fa-download"></i>
                         <span>Descargar PDF</span>
                     </a>
@@ -52,7 +49,7 @@ include 'includes/header.php';
             </div>
             
             <!-- Columna derecha - Imagen -->
-            <div class="flex-1 flex justify-center">
+            <div class="flex-1 flex justify-center efect2">
                 <img src="<?= BASE_URL ?>/assets/img/Riqueza.avif" 
                      alt="Plan de Marketing DXN" 
                      class="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-2xl shadow-2xl">
@@ -71,19 +68,19 @@ include 'includes/header.php';
                 <i class="fas fa-gift text-cian text-sm"></i>
                 <span class="text-xs font-semibold text-azul-oscuro tracking-wide">COMPENSACIÓN</span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 efect1">
                 <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                     Bonos y Compensaciones
                 </span>
             </h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">
+            <p class="text-gray-600 max-w-2xl mx-auto efect1">
                 Conoce todos los beneficios que DXN tiene para ti como distribuidor
             </p>
         </div>
         
         <!-- Tarjeta 1: Ventas de Menudeo -->
         <div class="flex flex-col lg:flex-row items-center gap-8 mb-12">
-            <div class="flex-1 order-2 lg:order-1">
+            <div class="flex-1 order-2 lg:order-1 efect1">
                 <div class="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-6">
                     <div class="inline-flex items-center gap-2 bg-green-500 text-white px-3 py-1 rounded-full text-sm mb-3">
                         <i class="fas fa-tag"></i>
@@ -96,7 +93,7 @@ include 'includes/header.php';
                     </p>
                 </div>
             </div>
-            <div class="flex-1 order-1 lg:order-2">
+            <div class="flex-1 order-1 lg:order-2 efect2">
                 <img src="<?= BASE_URL ?>/assets/img/Riqueza.avif" 
                      alt="Ventas de Menudeo"
                      class="rounded-2xl shadow-lg w-full">
@@ -105,7 +102,7 @@ include 'includes/header.php';
         
         <!-- Tarjeta 2: Bono Grupal -->
         <div class="flex flex-col lg:flex-row-reverse items-center gap-8 mb-12">
-            <div class="flex-1">
+            <div class="flex-1 efect1">
                 <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-6">
                     <div class="inline-flex items-center gap-2 bg-blue-500 text-white px-3 py-1 rounded-full text-sm mb-3">
                         <i class="fas fa-users"></i>
@@ -117,7 +114,7 @@ include 'includes/header.php';
                     </p>
                 </div>
             </div>
-            <div class="flex-1">
+            <div class="flex-1 efect2">
                 <img src="<?= BASE_URL ?>/assets/img/equipo.avif" 
                      alt="Bono Grupal"
                      class="rounded-2xl shadow-lg w-full">
@@ -126,7 +123,7 @@ include 'includes/header.php';
         
         <!-- Tarjeta 3: Bono Estrella Grupal -->
         <div class="flex flex-col lg:flex-row items-center gap-8 mb-12">
-            <div class="flex-1">
+            <div class="flex-1 efect1">
                 <div class="bg-gradient-to-r from-purple-50 to-purple-100 rounded-2xl p-6">
                     <div class="inline-flex items-center gap-2 bg-purple-500 text-white px-3 py-1 rounded-full text-sm mb-3">
                         <i class="fas fa-star"></i>
@@ -138,7 +135,7 @@ include 'includes/header.php';
                     </p>
                 </div>
             </div>
-            <div class="flex-1">
+            <div class="flex-1 efect2">
                 <img src="<?= BASE_URL ?>/assets/img/equipo.avif" 
                      alt="Bono Estrella Grupal"
                      class="rounded-2xl shadow-lg w-full">
@@ -147,7 +144,7 @@ include 'includes/header.php';
         
         <!-- Tarjeta 4: Bono de Desarrollo -->
         <div class="flex flex-col lg:flex-row-reverse items-center gap-8 mb-12">
-            <div class="flex-1">
+            <div class="flex-1 efect1">
                 <div class="bg-gradient-to-r from-yellow-50 to-yellow-100 rounded-2xl p-6">
                     <div class="inline-flex items-center gap-2 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm mb-3">
                         <i class="fas fa-chart-line"></i>
@@ -159,7 +156,7 @@ include 'includes/header.php';
                     </p>
                 </div>
             </div>
-            <div class="flex-1">
+            <div class="flex-1 efect2">
                 <img src="<?= BASE_URL ?>/assets/img/Riqueza.avif" 
                      alt="Bono de Desarrollo"
                      class="rounded-2xl shadow-lg w-full">
@@ -168,7 +165,7 @@ include 'includes/header.php';
         
         <!-- Tarjeta 5: Ganancia Compartida Internacional -->
         <div class="flex flex-col lg:flex-row items-center gap-8 mb-12">
-            <div class="flex-1">
+            <div class="flex-1 efect1">
                 <div class="bg-gradient-to-r from-indigo-50 to-indigo-100 rounded-2xl p-6">
                     <div class="inline-flex items-center gap-2 bg-indigo-500 text-white px-3 py-1 rounded-full text-sm mb-3">
                         <i class="fas fa-globe"></i>
@@ -180,7 +177,7 @@ include 'includes/header.php';
                     </p>
                 </div>
             </div>
-            <div class="flex-1">
+            <div class="flex-1 efect2">
                 <img src="<?= BASE_URL ?>/assets/img/viajes.avif" 
                      alt="Ganancia Internacional"
                      class="rounded-2xl shadow-lg w-full">
@@ -189,7 +186,7 @@ include 'includes/header.php';
         
         <!-- Tarjeta 6: Bono de Dirigentes -->
         <div class="flex flex-col lg:flex-row-reverse items-center gap-8 mb-12">
-            <div class="flex-1">
+            <div class="flex-1 efect1">
                 <div class="bg-gradient-to-r from-red-50 to-red-100 rounded-2xl p-6">
                     <div class="inline-flex items-center gap-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm mb-3">
                         <i class="fas fa-crown"></i>
@@ -201,7 +198,7 @@ include 'includes/header.php';
                     </p>
                 </div>
             </div>
-            <div class="flex-1">
+            <div class="flex-1 efect2">
                 <img src="<?= BASE_URL ?>/assets/img/equipo.avif" 
                      alt="Bono de Dirigentes"
                      class="rounded-2xl shadow-lg w-full">
@@ -220,7 +217,7 @@ include 'includes/header.php';
                 <i class="fas fa-trophy text-cian text-sm"></i>
                 <span class="text-xs font-semibold text-azul-oscuro tracking-wide">RECOMPENSAS</span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 efect1">
                 <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                     Incentivos Especiales
                 </span>
@@ -229,7 +226,7 @@ include 'includes/header.php';
         
         <div class="grid md:grid-cols-3 gap-6">
             <!-- Incentivo 1 -->
-            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="efect3 bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-azul-oscuro to-indigo rounded-full flex items-center justify-center">
                     <i class="fas fa-plane text-white text-2xl"></i>
                 </div>
@@ -241,7 +238,7 @@ include 'includes/header.php';
             </div>
             
             <!-- Incentivo 2 -->
-            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="efect3 bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-indigo to-cian rounded-full flex items-center justify-center">
                     <i class="fas fa-mobile-alt text-white text-2xl"></i>
                 </div>
@@ -253,7 +250,7 @@ include 'includes/header.php';
             </div>
             
             <!-- Incentivo 3 -->
-            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="efect3 bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cian to-azul-oscuro rounded-full flex items-center justify-center">
                     <i class="fas fa-globe-americas text-white text-2xl"></i>
                 </div>
@@ -277,22 +274,22 @@ include 'includes/header.php';
                 <i class="fas fa-file-pdf text-cian text-sm"></i>
                 <span class="text-xs font-semibold text-azul-oscuro tracking-wide">DOCUMENTACIÓN</span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 efect1">
                 <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                     Descargar PDF Plan de Marketing
                 </span>
             </h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">
+            <p class="text-gray-600 max-w-2xl mx-auto efect1">
                 Selecciona tu país y descarga el plan de marketing completo
             </p>
         </div>
         
-        <div class="relative">
+        <div class="relative efect2">
             <!-- Controles del carrusel -->
-            <button id="prev-btn" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-azul-oscuro hover:text-white w-10 h-10 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center">
+            <button id="prev-btn" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-blue-500 hover:bg-azul-oscuro text-white w-10 h-10 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center">
                 <i class="fas fa-chevron-left"></i>
             </button>
-            <button id="next-btn" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-azul-oscuro hover:text-white w-10 h-10 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center">
+            <button id="next-btn" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-blue-500 hover:bg-azul-oscuro text-white w-10 h-10 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center">
                 <i class="fas fa-chevron-right"></i>
             </button>
             

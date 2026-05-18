@@ -34,7 +34,7 @@ if (!$producto) {
     <!-- Botón de volver -->
     <div class="mb-3">
         <a href="<?= BASE_URL ?>/tienda-virtual?serie=<?= $serieEncontrada ?>" 
-        class="border-2 border-indigo text-indigo hover:bg-indigo hover:text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base inline-flex">
+        class="efect3 border-2 border-indigo text-indigo hover:bg-indigo hover:text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base inline-flex">
             <i class="fas fa-arrow-left transition-transform group-hover:-translate-x-1"></i>
             <span>Volver a <?= ucfirst($serieEncontrada) ?></span>
         </a>
@@ -44,7 +44,6 @@ if (!$producto) {
     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
         <div class="md:flex">
             <!-- Imagen del producto -->
-                        <!-- Imagen del producto -->
             <div class="md:w-1/2 bg-gradient-to-br from-seccion-suave to-cian/20 p-8 flex items-center justify-center">
                 <?php 
                 $imgPath = $producto['imagen'] ?? '';
@@ -54,9 +53,9 @@ if (!$producto) {
                 <?php if(!empty($imgPath) && file_exists($fullImagePath)): ?>
                     <img src="<?= $fullImageUrl ?>" 
                         alt="<?= htmlspecialchars($producto['nombre']) ?>"
-                        class="w-full max-w-md h-auto object-contain rounded-lg shadow-xl">
+                        class="w-full max-w-md h-auto object-contain rounded-lg shadow-xl efect2">
                 <?php else: ?>
-                    <div class="w-full max-w-md h-96 bg-white rounded-lg shadow-xl flex items-center justify-center">
+                    <div class="efect2 w-full max-w-md h-96 bg-white rounded-lg shadow-xl flex items-center justify-center">
                         <i class="fas fa-box-open text-8xl text-cian opacity-70"></i>
                     </div>
                 <?php endif; ?>
@@ -72,7 +71,7 @@ if (!$producto) {
                 </div>
 
                 <!-- Nombre -->
-                <h1 class="text-3xl md:text-4xl font-bold text-azul-oscuro mb-4">
+                <h1 class="text-3xl md:text-4xl font-bold text-azul-oscuro mb-4 efect1">
                     <?= htmlspecialchars($producto['nombre']) ?>
                 </h1>
 
@@ -95,7 +94,7 @@ if (!$producto) {
 
                 <!-- Beneficios completos -->
                 <?php if(isset($producto['beneficios']) && is_array($producto['beneficios'])): ?>
-                <div class="mb-8 bg-seccion-suave/60 rounded-xl p-6 md:p-8">
+                <div class="mb-8 bg-seccion-suave/60 rounded-xl p-6 md:p-8 efect2">
                     <h3 class="text-xl font-semibold text-azul-oscuro mb-4 flex items-center">
                         <i class="fas fa-star text-yellow-500 mr-2"></i>
                         Beneficios del producto
@@ -113,7 +112,7 @@ if (!$producto) {
 
                 <!-- Botón de agregar al carrito -->
                 <button id="btn-add-to-cart" 
-                    class="group/btn w-full bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white px-6 md:px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg flex items-center justify-center gap-2 text-sm md:text-base"
+                    class="efect1 group/btn w-full bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white px-6 md:px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg flex items-center justify-center gap-2 text-sm md:text-base"
                     data-producto='<?= json_encode([
                         'id' => $producto['id'],
                         'nombre' => $producto['nombre'],
@@ -130,7 +129,7 @@ if (!$producto) {
                 <!-- Enlace para seguir comprando -->
                 <div class="mt-4 text-center">
                     <a href="<?= BASE_URL ?>/tienda-virtual?serie=<?= $serieEncontrada ?>" 
-                    class="border-2 border-indigo text-indigo hover:bg-indigo hover:text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base inline-flex">
+                    class="efect2 border-2 border-indigo text-indigo hover:bg-indigo hover:text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base inline-flex">
                         
                         <i class="fas fa-shopping-bag"></i>
                         <span>Seguir comprando</span>
@@ -153,7 +152,7 @@ if (!$producto) {
                 <span class="text-azul-oscuro font-semibold">También te puede interesar</span>
             </div>
         </div>
-        <h2 class="text-2xl md:text-3xl font-bold text-azul-oscuro mt-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-azul-oscuro mt-8 efect1">
             Productos relacionados
         </h2>
         <div class="w-20 h-1 bg-gradient-to-r from-cian to-indigo mx-auto mt-3 rounded-full"></div>
@@ -170,7 +169,7 @@ if (!$producto) {
     <?php if(count($relacionados) > 0): ?>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <?php foreach($relacionados as $rel): ?>
-                <div class="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                <div class="efect3 group relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden">
                     <!-- Efecto de borde gradiente -->
                     <div class="absolute inset-0 bg-gradient-to-r from-cian via-indigo to-azul-oscuro opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-sm -z-10"></div>
                     

@@ -18,7 +18,7 @@ include 'includes/header.php';
                 </div>
                 
                 <!-- Título principal -->
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6 efect1">
                     <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                         ¿Qué harías
                     </span>
@@ -57,7 +57,7 @@ include 'includes/header.php';
             </div>
             
             <!-- Columna derecha - Imagen -->
-            <div class="flex-1 flex justify-center">
+            <div class="flex-1 flex justify-center efect2">
                 <img src="<?= BASE_URL ?>/assets/img/libertad.avif" 
                      alt="Libertad financiera" 
                      class="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-2xl shadow-2xl">
@@ -71,7 +71,7 @@ include 'includes/header.php';
      ======================================== -->
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
+        <div class="text-center mb-12 efect1">
             <div class="inline-flex items-center gap-2 bg-gradient-to-r from-azul-oscuro/10 to-cian/10 px-4 py-2 rounded-full mb-4">
                 <i class="fas fa-chart-pie text-cian text-sm"></i>
                 <span class="text-xs font-semibold text-azul-oscuro tracking-wide">LA CLAVE DEL ÉXITO</span>
@@ -88,7 +88,7 @@ include 'includes/header.php';
         
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Empleado (E) -->
-            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-green-50 to-green-100">
+            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-green-50 to-green-100 efect3">
                 <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-green-600 to-green-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                     <i class="fas fa-user-tie text-3xl text-white"></i>
                 </div>
@@ -99,7 +99,7 @@ include 'includes/header.php';
             </div>
             
             <!-- Autoempleado (A) -->
-            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-blue-50 to-blue-100">
+            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-blue-50 to-blue-100 efect3">
                 <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-blue-600 to-blue-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                     <i class="fas fa-laptop-code text-3xl text-white"></i>
                 </div>
@@ -110,7 +110,7 @@ include 'includes/header.php';
             </div>
             
             <!-- Dueño de Negocio (D) - Destacado -->
-            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-azul-oscuro/10 to-indigo/10 ring-2 ring-cian">
+            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-azul-oscuro/10 to-indigo/10 ring-2 ring-cian efect3">
                 <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-azul-oscuro to-indigo rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                     <i class="fas fa-chart-line text-3xl text-white"></i>
                 </div>
@@ -122,7 +122,7 @@ include 'includes/header.php';
             </div>
             
             <!-- Inversionista (I) -->
-            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-yellow-50 to-yellow-100">
+            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-yellow-50 to-yellow-100 efect3">
                 <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-yellow-600 to-yellow-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                     <i class="fas fa-coins text-3xl text-white"></i>
                 </div>
@@ -141,17 +141,17 @@ include 'includes/header.php';
 <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
         <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            <div class="flex-1">
+            <div class="flex-1 efect2">
                 <img src="<?= BASE_URL ?>/assets/img/cuadrante.avif" 
                      alt="Cuadrante del dinero"
                      class="rounded-2xl shadow-xl w-full">
             </div>
             <div class="flex-1 text-center lg:text-left">
-                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-azul-oscuro/10 to-cian/10 px-4 py-2 rounded-full mb-4">
+                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-azul-oscuro/10 to-cian/10 px-4 py-2 rounded-full mb-4 efect1">
                     <i class="fas fa-question-circle text-cian text-sm"></i>
                     <span class="text-xs font-semibold text-azul-oscuro tracking-wide">¿POR QUÉ ES EL MEJOR?</span>
                 </div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 efect1">
                     <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                         Dueño de Negocio
                     </span>
@@ -173,8 +173,8 @@ include 'includes/header.php';
 <!-- ========================================
      SECCIÓN: LLAMADA A LA ACCIÓN MOTIVACIONAL
      ======================================== -->
-<section class="py-16 bg-gradient-to-r from-azul-oscuro via-indigo to-cian">
-    <div class="container mx-auto px-4 text-center">
+<section class="py-16 bg-gradient-to-r from-azul-oscuro via-indigo to-cian efect2">
+    <div class="container mx-auto px-4 text-center efect1">
         <i class="fas fa-rocket text-5xl text-white/80 mb-4"></i>
         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
             ¡Es momento de tomar las riendas de tu futuro!
@@ -195,7 +195,7 @@ include 'includes/header.php';
      ======================================== -->
 <section id="como-funciona" class="py-16 bg-white">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
+        <div class="text-center mb-12 efect1">
             <div class="inline-flex items-center gap-2 bg-gradient-to-r from-azul-oscuro/10 to-cian/10 px-4 py-2 rounded-full mb-4">
                 <i class="fas fa-cogs text-cian text-sm"></i>
                 <span class="text-xs font-semibold text-azul-oscuro tracking-wide">PASO A PASO</span>
@@ -209,7 +209,7 @@ include 'includes/header.php';
         
         <div class="grid md:grid-cols-3 gap-6">
             <!-- Paso 1: Usar -->
-            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 efect3">
                 <div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-azul-oscuro to-indigo rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                     <span class="text-3xl font-bold text-white">1</span>
                 </div>
@@ -221,7 +221,7 @@ include 'includes/header.php';
             </div>
             
             <!-- Paso 2: Compartir -->
-            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 efect3">
                 <div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-indigo to-cian rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                     <span class="text-3xl font-bold text-white">2</span>
                 </div>
@@ -233,7 +233,7 @@ include 'includes/header.php';
             </div>
             
             <!-- Paso 3: Construir -->
-            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 efect3">
                 <div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-cian to-azul-oscuro rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                     <span class="text-3xl font-bold text-white">3</span>
                 </div>
@@ -252,7 +252,7 @@ include 'includes/header.php';
      ======================================== -->
 <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-8">
+        <div class="text-center mb-8 efect1">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">
                 <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                     Conoce más sobre DXN
@@ -264,7 +264,7 @@ include 'includes/header.php';
         </div>
         
         <div class="flex justify-center">
-            <div class="relative w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl">
+            <div class="relative w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl efect3">
                 <div style="padding-bottom: 56.25%; position: relative;">
                     <iframe 
                         class="absolute top-0 left-0 w-full h-full"
@@ -286,7 +286,7 @@ include 'includes/header.php';
      ======================================== -->
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
+        <div class="text-center mb-12 efect1">
             <div class="inline-flex items-center gap-2 bg-gradient-to-r from-azul-oscuro/10 to-cian/10 px-4 py-2 rounded-full mb-4">
                 <i class="fas fa-user-plus text-cian text-sm"></i>
                 <span class="text-xs font-semibold text-azul-oscuro tracking-wide">REQUISITOS</span>
@@ -299,7 +299,7 @@ include 'includes/header.php';
         </div>
         
         <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div class="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl">
+            <div class="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl efect3">
                 <div class="w-16 h-16 mx-auto mb-4 bg-green-600 rounded-full flex items-center justify-center">
                     <i class="fas fa-calendar-check text-2xl text-white"></i>
                 </div>
@@ -307,7 +307,7 @@ include 'includes/header.php';
                 <p class="text-sm text-gray-600">Requisito fundamental para iniciar tu negocio</p>
             </div>
             
-            <div class="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl">
+            <div class="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl efect3">
                 <div class="w-16 h-16 mx-auto mb-4 bg-blue-600 rounded-full flex items-center justify-center">
                     <i class="fas fa-file-alt text-2xl text-white"></i>
                 </div>
@@ -315,8 +315,8 @@ include 'includes/header.php';
                 <p class="text-sm text-gray-600">Obtén tu código de nuevo miembro</p>
             </div>
             
-            <div class="text-center p-6 bg-gradient-to-br from-azul-oscuro/10 to-indigo/10 rounded-xl">
-                <div class="w-16 h-16 mx-auto mb-4 bg-indigo-600 rounded-full flex items-center justify-center">
+            <div class="text-center p-6 bg-gradient-to-br from-azul-oscuro/10 to-indigo/10 rounded-xl efect3">
+               <div class="w-16 h-16 mx-auto mb-4 bg-blue-400 rounded-full flex items-center justify-center">
                     <i class="fas fa-envelope text-2xl text-white"></i>
                 </div>
                 <h3 class="font-bold text-gray-800">Envíanos tu código</h3>

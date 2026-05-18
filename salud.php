@@ -18,7 +18,7 @@ include 'includes/header.php';
                 </div>
                 
                 <!-- Título principal -->
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6 efect1">
                     <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                         Una vida
                     </span>
@@ -42,8 +42,8 @@ include 'includes/header.php';
             </div>
             
             <!-- Columna derecha - Imagen -->
-            <div class="flex-1 flex justify-center">
-                <img src="<?= BASE_URL ?>/assets/img/comoNosEnfermamos.avif" 
+            <div class="flex-1 flex justify-center efect2">
+                <img src="<?= BASE_URL ?>/assets/img/banner_salud.avif" 
                      alt="Salud y bienestar" 
                      class="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-2xl shadow-2xl">
             </div>
@@ -51,13 +51,11 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- ========================================
-     SECCIÓN: CÓMO NOS ENFERMAMOS
-     ======================================== -->
+
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
         <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            <div class="flex-1 order-2 lg:order-1">
+            <div class="flex-1 order-2 lg:order-1 efect1">
                 <div class="inline-flex items-center gap-2 bg-gradient-to-r from-azul-oscuro/10 to-cian/10 px-4 py-2 rounded-full mb-4">
                     <i class="fas fa-question-circle text-cian text-sm"></i>
                     <span class="text-xs font-semibold text-azul-oscuro tracking-wide">¿SABÍAS QUE?</span>
@@ -90,7 +88,7 @@ include 'includes/header.php';
                     </div>
                 </div>
             </div>
-            <div class="flex-1 order-1 lg:order-2">
+            <div class="flex-1 order-1 lg:order-2 efect2">
                 <img src="<?= BASE_URL ?>/assets/img/comoNosEnfermamos.avif" 
                      alt="Cómo nos enfermamos"
                      class="rounded-2xl shadow-xl w-full">
@@ -99,12 +97,10 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- ========================================
-     SECCIÓN: RESUMEN TOXINAS
-     ======================================== -->
+
 <section class="py-16 bg-gradient-to-r from-azul-oscuro/5 via-indigo/5 to-cian/5">
     <div class="container mx-auto px-4 text-center">
-        <div class="max-w-3xl mx-auto">
+        <div class="max-w-3xl mx-auto efect1">
             <i class="fas fa-skull-crossbones text-4xl text-red-400 mb-4"></i>
             <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
                 En resumen: Nos enfermamos por el ingreso de <span class="text-red-500">TOXINAS</span> 
@@ -114,18 +110,16 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- ========================================
-     SECCIÓN: LA SOLUCIÓN
-     ======================================== -->
+
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
         <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            <div class="flex-1">
+            <div class="flex-1 efect2">
                 <img src="<?= BASE_URL ?>/assets/img/familia.avif" 
                      alt="Familia saludable"
                      class="rounded-2xl shadow-xl w-full">
             </div>
-            <div class="flex-1">
+            <div class="flex-1 efect1">
                 <div class="inline-flex items-center gap-2 bg-gradient-to-r from-azul-oscuro/10 to-cian/10 px-4 py-2 rounded-full mb-4">
                     <i class="fas fa-lightbulb text-cian text-sm"></i>
                     <span class="text-xs font-semibold text-azul-oscuro tracking-wide">LA SOLUCIÓN</span>
@@ -159,9 +153,7 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- ========================================
-     SECCIÓN: LOS 4 PILARES DE LA SALUD
-     ======================================== -->
+
 <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
@@ -169,19 +161,19 @@ include 'includes/header.php';
                 <i class="fas fa-columns text-cian text-sm"></i>
                 <span class="text-xs font-semibold text-azul-oscuro tracking-wide">FUNDAMENTOS</span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 efect1">
                 <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                     Los 4 Pilares de la Salud
                 </span>
             </h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">
+            <p class="text-gray-600 max-w-2xl mx-auto efect1">
                 Estos son los fundamentos esenciales para mantener una vida saludable y equilibrada
             </p>
         </div>
         
         <div class="grid md:grid-cols-2 gap-6">
             <!-- Pilar 1 -->
-            <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 efect3">
                 <div class="flex items-start gap-4">
                     <div class="w-12 h-12 bg-gradient-to-r from-azul-oscuro to-indigo rounded-full flex items-center justify-center flex-shrink-0">
                         <i class="fas fa-smile text-white text-xl"></i>
@@ -197,7 +189,7 @@ include 'includes/header.php';
             </div>
             
             <!-- Pilar 2 -->
-            <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 efect3">
                 <div class="flex items-start gap-4">
                     <div class="w-12 h-12 bg-gradient-to-r from-indigo to-cian rounded-full flex items-center justify-center flex-shrink-0">
                         <i class="fas fa-heartbeat text-white text-xl"></i>
@@ -213,7 +205,7 @@ include 'includes/header.php';
             </div>
             
             <!-- Pilar 3 -->
-            <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 efect3">
                 <div class="flex items-start gap-4">
                     <div class="w-12 h-12 bg-gradient-to-r from-cian to-azul-oscuro rounded-full flex items-center justify-center flex-shrink-0">
                         <i class="fas fa-apple-alt text-white text-xl"></i>
@@ -229,7 +221,7 @@ include 'includes/header.php';
             </div>
             
             <!-- Pilar 4 -->
-            <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 efect3">
                 <div class="flex items-start gap-4">
                     <div class="w-12 h-12 bg-gradient-to-r from-azul-oscuro to-indigo rounded-full flex items-center justify-center flex-shrink-0">
                         <i class="fas fa-capsules text-white text-xl"></i>
@@ -247,9 +239,7 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- ========================================
-     SECCIÓN: PRODUCTOS DESTACADOS
-     ======================================== -->
+
 <section id="productos" class="py-16 bg-white">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
@@ -257,7 +247,7 @@ include 'includes/header.php';
                 <i class="fas fa-box-open text-cian text-sm"></i>
                 <span class="text-xs font-semibold text-azul-oscuro tracking-wide">PRODUCTOS DESTACADOS</span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 efect1">
                 <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                     Nuestros productos sugeridos
                 </span>
@@ -269,12 +259,12 @@ include 'includes/header.php';
         
         <!-- Producto 1: Spirulina -->
         <div class="flex flex-col lg:flex-row items-center gap-8 mb-16">
-            <div class="flex-1">
+            <div class="flex-1 efect2">
                 <img src="<?= BASE_URL ?>/assets/img/algaspirulina.avif" 
                      alt="Spirulina"
                      class="rounded-2xl shadow-lg w-full">
             </div>
-            <div class="flex-1">
+            <div class="flex-1 efect1">
                 <span class="inline-block bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full mb-3">Suplemento natural</span>
                 <h3 class="text-2xl md:text-3xl font-bold text-azul-oscuro mb-3">Spirulina</h3>
                 <p class="text-gray-600 mb-4">
@@ -291,13 +281,13 @@ include 'includes/header.php';
         </div>
         
         <!-- Producto 2: Ganoderma -->
-        <div class="flex flex-col lg:flex-row-reverse items-center gap-8 mb-16">
-            <div class="flex-1">
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-8 mb-16 bg-gray-50 px-6 py-8 rounded-2xl shadow">
+            <div class="flex-1 efect2">
                 <img src="<?= BASE_URL ?>/assets/img/ganodermaplanta.avif" 
                      alt="Ganoderma Lucidum"
                      class="rounded-2xl shadow-lg w-full">
             </div>
-            <div class="flex-1">
+            <div class="flex-1 efect1">
                 <span class="inline-block bg-amber-100 text-amber-700 text-sm px-3 py-1 rounded-full mb-3">Hongo medicinal</span>
                 <h3 class="text-2xl md:text-3xl font-bold text-azul-oscuro mb-3">Ganoderma Lucidum</h3>
                 <p class="text-gray-600 mb-4">
@@ -315,12 +305,12 @@ include 'includes/header.php';
         
         <!-- Producto 3: Noni -->
         <div class="flex flex-col lg:flex-row items-center gap-8 mb-16">
-            <div class="flex-1">
+            <div class="flex-1 efect2">
                 <img src="<?= BASE_URL ?>/assets/img/noniplanta.avif" 
                      alt="Noni"
                      class="rounded-2xl shadow-lg w-full">
             </div>
-            <div class="flex-1">
+            <div class="flex-1 efect1">
                 <span class="inline-block bg-purple-100 text-purple-700 text-sm px-3 py-1 rounded-full mb-3">Fruto tropical</span>
                 <h3 class="text-2xl md:text-3xl font-bold text-azul-oscuro mb-3">Noni</h3>
                 <p class="text-gray-600 mb-4">
@@ -337,13 +327,13 @@ include 'includes/header.php';
         </div>
         
         <!-- Producto 4: Oolong Tea -->
-        <div class="flex flex-col lg:flex-row-reverse items-center gap-8 mb-16">
-            <div class="flex-1">
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-8 mb-16 bg-gray-50 px-6 py-8 rounded-2xl shadow">
+            <div class="flex-1 efect2">
                 <img src="<?= BASE_URL ?>/assets/img/oolongplanta.avif" 
                      alt="Oolong Tea"
                      class="rounded-2xl shadow-lg w-full">
             </div>
-            <div class="flex-1">
+            <div class="flex-1 efect1">
                 <span class="inline-block bg-cyan-100 text-cyan-700 text-sm px-3 py-1 rounded-full mb-3">Té semioxidado</span>
                 <h3 class="text-2xl md:text-3xl font-bold text-azul-oscuro mb-3">Oolong Tea</h3>
                 <p class="text-gray-600 mb-4">
@@ -361,12 +351,12 @@ include 'includes/header.php';
         
         <!-- Producto 5: Sábila / Aloe Vera -->
         <div class="flex flex-col lg:flex-row items-center gap-8 mb-16">
-            <div class="flex-1">
+            <div class="flex-1 efect2">
                 <img src="<?= BASE_URL ?>/assets/img/sabilaplanta.avif" 
                      alt="Sábila"
                      class="rounded-2xl shadow-lg w-full">
             </div>
-            <div class="flex-1">
+            <div class="flex-1 efect1">
                 <span class="inline-block bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full mb-3">Planta medicinal</span>
                 <h3 class="text-2xl md:text-3xl font-bold text-azul-oscuro mb-3">Sábila / Aloe Vera</h3>
                 <p class="text-gray-600 mb-4">
@@ -383,13 +373,13 @@ include 'includes/header.php';
         </div>
         
         <!-- Producto 6: Cordyceps -->
-        <div class="flex flex-col lg:flex-row-reverse items-center gap-8 mb-16">
-            <div class="flex-1">
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-8 mb-16 bg-gray-50 px-6 py-8 rounded-2xl shadow">
+            <div class="flex-1 efect2">
                 <img src="<?= BASE_URL ?>/assets/img/cordycepsplanta.avif" 
                      alt="Cordyceps"
                      class="rounded-2xl shadow-lg w-full">
             </div>
-            <div class="flex-1">
+            <div class="flex-1 efect1">
                 <span class="inline-block bg-red-100 text-red-700 text-sm px-3 py-1 rounded-full mb-3">Hongo medicinal</span>
                 <h3 class="text-2xl md:text-3xl font-bold text-azul-oscuro mb-3">Cordyceps</h3>
                 <p class="text-gray-600 mb-4">
@@ -407,12 +397,12 @@ include 'includes/header.php';
         
         <!-- Producto 7: Melena de León -->
         <div class="flex flex-col lg:flex-row items-center gap-8">
-            <div class="flex-1">
+            <div class="flex-1 efect2">
                 <img src="<?= BASE_URL ?>/assets/img/plantaMelenaDeLeon.avif" 
                      alt="Melena de León"
                      class="rounded-2xl shadow-lg w-full">
             </div>
-            <div class="flex-1">
+            <div class="flex-1 efect1">
                 <span class="inline-block bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full mb-3">Hongo comestible</span>
                 <h3 class="text-2xl md:text-3xl font-bold text-azul-oscuro mb-3">Melena de León</h3>
                 <p class="text-gray-600 mb-4">

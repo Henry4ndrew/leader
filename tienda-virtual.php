@@ -9,7 +9,7 @@ $serieInicial = $_GET['serie'] ?? 'bebidas';
 <div class="container mx-auto px-4 py-8">
     <!-- Título decorativo -->
     <div class="text-center mb-8">
-        <div class="flex items-center justify-center gap-2 text-azul-oscuro">
+        <div class="flex items-center justify-center gap-2 text-azul-oscuro efect1">
             <i class="fas fa-store text-[1.8rem]"></i>
             <h1 class="text-2xl md:text-3xl font-bold">
                 Tienda virtual
@@ -20,7 +20,7 @@ $serieInicial = $_GET['serie'] ?? 'bebidas';
     </div>
     
     <!-- Botones de series con paleta de colores -->
-    <div class="flex flex-wrap justify-center gap-3 mb-8">
+    <div class="flex flex-wrap justify-center gap-3 mb-8 efect2">
         <button class="btn-serie bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md" data-serie="bebidas">
             <i class="fas fa-glass-water mr-2"></i> Bebidas
         </button>

@@ -54,7 +54,7 @@ if ($esAjax) {
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <?php foreach($productos as $producto): ?>
-                    <div class="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                    <div class="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden efect3">
                         <div class="absolute inset-0 bg-gradient-to-r from-cian via-indigo to-azul-oscuro opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-sm -z-10"></div>
                         
                         <div class="bg-white rounded-2xl p-0 relative z-10">
@@ -174,7 +174,7 @@ include 'includes/header.php';
 <?php if(!empty($productos)): ?>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <?php foreach($productos as $producto): ?>
-            <div class="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden">
+            <div class="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden efect3">
                 <div class="absolute inset-0 bg-gradient-to-r from-cian via-indigo to-azul-oscuro opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-sm -z-10"></div>
                 
                 <div class="bg-white rounded-2xl p-0 relative z-10">
