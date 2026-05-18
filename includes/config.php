@@ -10,4 +10,20 @@ define('CONTACT_EMAIL', 'henryandrew777@gmail.com');
 
 // Código de distribuidor DXN
 define('DXN_CODE', '610099281'); 
+
+
+
+
+// Retorna el tipo de llamada de acción para afiliación deacuerdo al tipo de página que ons encontramos
+function getCTAVersion() {
+    $current_page = basename($_SERVER['PHP_SELF'], '.php');
+    $salud_pages = ['salud', 'tienda-virtual'];
+    if (in_array($current_page, $salud_pages)) {
+        return 'salud';
+    }
+    return 'general';
+}
 ?>
+
+
+

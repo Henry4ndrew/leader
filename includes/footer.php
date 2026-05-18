@@ -1,4 +1,119 @@
-<footer class="bg-gradient-to-r from-azul-oscuro via-indigo to-cian text-white mt-16">
+<?php
+// Determinar qué versión mostrar
+$cta_version = getCTAVersion();
+?>
+
+<?php if ($cta_version === 'salud'): ?>
+    <!-- SECCIÓN DE AFILIACIÓN - Versión SALUD (para /salud y /tienda-virtual) -->
+    <section class="pt-16 pb-8 bg-gradient-to-br from-white via-seccion-suave to-white mt-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-4xl mx-auto">
+                <i class="fas fa-quote-left text-4xl text-azul-oscuro/30 mb-4"></i>
+                <h3 class="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8">
+                    Cuidar nuestra salud sin la necesidad de estar enferma(o) es tan esencial como respirar, 
+                    después de todo solo tenemos un lugar para vivir: <strong class="text-azul-oscuro">NUESTRO CUERPO</strong>.
+                </h3>
+                
+                <div class="bg-gradient-to-r from-azul-oscuro/5 via-indigo/5 to-cian/5 rounded-2xl p-6 mb-8">
+                    <h3 class="text-2xl font-bold text-azul-oscuro mb-4">Beneficios de adquirir un código DXN:</h3>
+                    <div class="grid md:grid-cols-2 gap-3 text-left">
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i class="fas fa-check-circle text-cian"></i>
+                            <span>Acceso a Productos Exclusivos con descuentos</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i class="fas fa-check-circle text-cian"></i>
+                            <span>Oportunidad de Ingresos por referidos</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i class="fas fa-check-circle text-cian"></i>
+                            <span>Creación de Red de Distribuidores</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i class="fas fa-check-circle text-cian"></i>
+                            <span>Formación y Apoyo de la comunidad DXN</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://eworld.dxn2u.com/index.php?r=account/register&mc=<?= DXN_CODE ?>&dlang=es-ES" 
+                       target="_blank"
+                       class="inline-flex items-center gap-2 bg-gradient-to-r from-azul-oscuro to-indigo text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Afiliación gratuita</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="<?= BASE_URL ?>/tienda-virtual" 
+                       class="inline-flex items-center gap-2 border-2 border-azul-oscuro text-azul-oscuro hover:bg-azul-oscuro hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+                        <i class="fas fa-store"></i>
+                        <span>Ver más productos</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<?php else: ?>
+    <!-- SECCIÓN DE AFILIACIÓN - Versión GENERAL (para el resto de páginas) -->
+    <section class="py-16 bg-gradient-to-br from-white via-seccion-suave to-white mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <!-- Elemento decorativo sutil -->
+            <div class="relative mb-8">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-24 h-24 bg-azul-oscuro/5 rounded-full blur-2xl"></div>
+                </div>
+                <div class="relative">
+                    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-azul-oscuro to-indigo rounded-2xl shadow-lg mb-4 transform rotate-3">
+                        <i class="fas fa-handshake text-4xl text-white"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-azul-oscuro via-indigo to-cian bg-clip-text text-transparent">
+                ¿Quieres ser parte de DXN?
+            </h2>
+            
+            <p class="text-texto text-lg mb-8 max-w-2xl mx-auto">
+                Únete a nuestra familia de distribuidores y comienza tu camino hacia el éxito
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://eworld.dxn2u.com/index.php?r=account/register&mc=<?= DXN_CODE ?>&dlang=es-ES" 
+                   target="_blank"
+                   class="group inline-flex items-center gap-2 bg-gradient-to-r from-azul-oscuro to-indigo text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-user-plus group-hover:animate-pulse"></i>
+                    <span>Afiliarme ahora</span>
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+                </a>
+                
+                <a href="<?= BASE_URL ?>/tienda-virtual" 
+                   class="group inline-flex items-center gap-2 border-2 border-azul-oscuro/20 bg-white text-azul-oscuro hover:bg-gradient-to-r hover:from-azul-oscuro hover:to-indigo hover:text-white hover:border-transparent px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-xl">
+                    <i class="fas fa-store"></i>
+                    <span>Conocer productos</span>
+                    <i class="fas fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"></i>
+                </a>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-3 mt-10">
+                <span class="inline-flex items-center gap-2 px-3 py-1 bg-azul-oscuro/10 rounded-full text-sm text-azul-oscuro">
+                    <i class="fas fa-check-circle text-cian text-xs"></i>
+                    Sin inversión inicial
+                </span>
+                <span class="inline-flex items-center gap-2 px-3 py-1 bg-azul-oscuro/10 rounded-full text-sm text-azul-oscuro">
+                    <i class="fas fa-check-circle text-cian text-xs"></i>
+                    Capacitación incluida
+                </span>
+                <span class="inline-flex items-center gap-2 px-3 py-1 bg-azul-oscuro/10 rounded-full text-sm text-azul-oscuro">
+                    <i class="fas fa-check-circle text-cian text-xs"></i>
+                    Comisiones atractivas
+                </span>
+            </div>
+        </div>
+    </section>
+<?php endif; ?>
+
+<footer class="bg-gradient-to-r from-azul-oscuro via-indigo to-cian text-white mt-0">
     <div class="container mx-auto px-4 py-8">
         <!-- Contenido principal del footer - 2 columnas -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
