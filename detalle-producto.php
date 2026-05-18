@@ -230,7 +230,7 @@ if (!$producto) {
                                         'id' => $rel['id'],
                                         'nombre' => $rel['nombre'],
                                         'precio' => $rel['precio'],
-                                        'imagen' => !empty($rel['imagen']) ? BASE_URL . $rel['imagen'] : BASE_URL . '/assets/img/placeholder.avif',
+                                        'imagen' => $rel['imagen'] ?? '/assets/img/placeholder.avif',  // ← CORREGIDO (sin BASE_URL)
                                         'cantidad' => 1
                                     ]) ?>'>
                                 <i class="fas fa-cart-plus group-hover/btn:scale-110 transition-transform"></i>

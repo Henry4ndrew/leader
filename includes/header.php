@@ -77,24 +77,27 @@
             
             <!-- Botones de acción - padding reducido -->
             <div class="hidden md:flex items-center gap-1 lg:gap-2">
-                <button class="bg-white/10 hover:bg-white/20 px-2 lg:px-3 py-1 md:py-1.5 rounded-lg transition-all duration-300 flex items-center gap-1 whitespace-nowrap text-xs md:text-sm">
+                <a href="https://eworld.dxn2u.com/index.php?r=account/register&mc=<?= DXN_CODE ?>&dlang=es-ES&fbclid=IwAR3tyZHQnhXZG7hYu8xUF8QNJ-dKvPMtkvLrjFv23l3kuQJ_6KP-gjW7GKA"
+                target="_blank"
+                class="bg-white/10 hover:bg-white/20 px-2 lg:px-3 py-1 md:py-1.5 rounded-lg transition-all duration-300 flex items-center gap-1 whitespace-nowrap text-xs md:text-sm">
+
                     <i class="fas fa-user-plus text-xs"></i>
                     <span class="hidden lg:inline">Unirme</span>
-                </button>
-                <button class="bg-cyan-500 hover:bg-cyan-600 px-2 lg:px-3 py-1 md:py-1.5 rounded-lg transition-all duration-300 flex items-center gap-1 shadow-lg whitespace-nowrap text-xs md:text-sm">
-                    <i class="fas fa-phone-alt text-xs"></i>
-                    <span class="hidden lg:inline">Contacto</span>
-                </button>
+                </a>
+                <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>" target="_blank"
+                    class="bg-cyan-500 hover:bg-cyan-600 px-3 py-2.5 rounded-lg flex items-center justify-center gap-2 transition-all text-xs">
+
+                    <i class="fab fa-whatsapp text-xs"></i>
+                    <span>WhatsApp</span>
+                </a>
             </div>
             
-            
-
-
+        
 
             <div class="flex items-center space-x-4">
                 <!-- Carrito de compras -->
-                <a href="<?= BASE_URL ?>/carrito" class="relative text-gray-700 hover:text-green-600 transition">
-                    <i class="fas fa-shopping-cart text-xl"></i>
+                <a href="<?= BASE_URL ?>/carrito" class="relative text-white transition">
+                    <i class="fas fa-shopping-cart text-xl animate-cart-glow"></i>
                     <span id="cart-counter" class="hidden absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5 min-w-[18px] text-center">
                         0
                     </span>
@@ -139,20 +142,26 @@
                         <span>Sobre mí</span>
                     </a>
                     <div class="flex gap-2 mt-2 pt-2 border-t border-white/20">
-                        <button class="mobile-nav-link flex-1 bg-white/10 hover:bg-white/20 py-2 rounded-lg flex items-center justify-center gap-2 transition-all text-xs">
-                            <i class="fas fa-user-plus"></i>
-                            <span>Unirme</span>
-                        </button>
-                        <button class="mobile-nav-link flex-1 bg-cyan-500 hover:bg-cyan-600 py-2 rounded-lg flex items-center justify-center gap-2 transition-all text-xs">
-                            <i class="fas fa-phone-alt"></i>
-                            <span>Contacto</span>
-                        </button>
+                        <a href="https://eworld.dxn2u.com/index.php?r=account/register&mc=<?= DXN_CODE ?>&dlang=es-ES&fbclid=IwAR3tyZHQnhXZG7hYu8xUF8QNJ-dKvPMtkvLrjFv23l3kuQJ_6KP-gjW7GKA"
+                        target="_blank"
+                        class="bg-white/10 hover:bg-white/20 px-2 lg:px-3 py-1 md:py-1.5 rounded-lg transition-all duration-300 flex items-center gap-1 whitespace-nowrap text-xs md:text-sm">
+
+                            <i class="fas fa-user-plus text-xs"></i>
+                            <span class="hidden lg:inline">Unirme</span>
+                        </a>
+                        <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>" target="_blank"
+                            class="bg-cyan-500 hover:bg-cyan-600 px-3 py-2.5 rounded-lg flex items-center justify-center gap-2 transition-all text-xs">
+
+                            <i class="fab fa-whatsapp text-xs"></i>
+                            <span>WhatsApp</span>
+                        </a>
                     </div>
                 </nav>
             </div>
         </div>
     </div>
 </header>
+
 
 <!-- JavaScript -->
 <script src="<?= BASE_URL ?>/assets/js/app.js"></script>

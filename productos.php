@@ -243,15 +243,14 @@ include 'includes/header.php';
                                 </div>
                             </div>
                         <?php endif; ?>
-                        
                         <button class="btn-add-to-cart w-full bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white px-4 py-2.5 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 group/btn"
-                                data-producto='<?= json_encode([
-                                    'id' => $producto['id'],
-                                    'nombre' => $producto['nombre'],
-                                    'precio' => $producto['precio'] ?? null,
-                                    'imagen' => !empty($producto['imagen']) ? BASE_URL . $producto['imagen'] : BASE_URL . '/assets/img/placeholder.avif',
-                                    'cantidad' => 1
-                                ]) ?>'>
+                        data-producto='<?= json_encode([
+                            'id' => $producto['id'],
+                            'nombre' => $producto['nombre'],
+                            'precio' => $producto['precio'] ?? null,
+                            'imagen' => $producto['imagen'] ?? '/assets/img/placeholder.avif',  // ← CORREGIDO (sin BASE_URL)
+                            'cantidad' => 1
+                        ]) ?>'>
                             <i class="fas fa-cart-plus group-hover/btn:scale-110 transition-transform"></i>
                             <span>Agregar al carrito</span>
                             <i class="fas fa-arrow-right opacity-0 group-hover/btn:opacity-100 group-hover/btn:translate-x-1 transition-all"></i>

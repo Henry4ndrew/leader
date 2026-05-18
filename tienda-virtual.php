@@ -67,10 +67,10 @@ document.addEventListener('DOMContentLoaded', function() {
         botones.forEach(btn => {
             const btnSerie = btn.getAttribute('data-serie');
             if (btnSerie === serie) {
-                btn.classList.add('ring-2', 'ring-offset-2', 'ring-green-600', 'scale-105');
+                btn.classList.add('ring-2', 'ring-offset-2', 'ring-cian', 'scale-105');
                 btn.classList.remove('hover:scale-105');
             } else {
-                btn.classList.remove('ring-2', 'ring-offset-2', 'ring-green-600', 'scale-105');
+                btn.classList.remove('ring-2', 'ring-offset-2', 'ring-cian', 'scale-105');
                 btn.classList.add('hover:scale-105');
             }
         });
@@ -80,15 +80,18 @@ document.addEventListener('DOMContentLoaded', function() {
     function agregarAlCarrito(productoData) {
         let carrito = JSON.parse(localStorage.getItem('carrito') || '[]');
         
+        // Asegurar que el precio sea número válido
+        productoData.precio = (productoData.precio !== null && !isNaN(productoData.precio)) ? parseFloat(productoData.precio) : null;
+        productoData.cantidad = parseInt(productoData.cantidad) || 1;
+        
         // Verificar si el producto ya existe en el carrito
         const existeIndex = carrito.findIndex(item => item.id === productoData.id);
         
         if (existeIndex !== -1) {
             // Incrementar cantidad
-            carrito[existeIndex].cantidad += 1;
+            carrito[existeIndex].cantidad += productoData.cantidad;
         } else {
             // Agregar nuevo producto
-            productoData.cantidad = 1;
             carrito.push(productoData);
         }
         
@@ -98,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Mostrar notificación
         mostrarNotificacion(`${productoData.nombre} agregado al carrito`, 'success');
         
-        // Actualizar contador del carrito si existe
+        // Actualizar contador del carrito
         actualizarContadorCarrito();
     }
     
@@ -106,14 +109,14 @@ document.addEventListener('DOMContentLoaded', function() {
     function mostrarNotificacion(mensaje, tipo = 'success') {
         const notificacion = document.createElement('div');
         notificacion.className = `fixed top-20 right-4 z-50 px-6 py-3 rounded-lg shadow-lg text-white ${
-    tipo === 'success' ? 'bg-gradient-to-r from-green-500 to-emerald-600' : 'bg-red-500'
-} transition-all duration-300 flex items-center gap-2 animate-slide-in`;
-
-const icono = tipo === 'success' 
-    ? '<i class="fas fa-check-circle"></i>' 
-    : '<i class="fas fa-exclamation-circle"></i>';
-
-notificacion.innerHTML = `${icono} <span>${mensaje}</span>`;
+           tipo === 'success' ? 'bg-gradient-to-r from-green-500 to-emerald-600' : 'bg-red-500'
+        } transition-all duration-300 flex items-center gap-2 animate-slide-in`;
+        
+        const icono = tipo === 'success' 
+            ? '<i class="fas fa-check-circle"></i>' 
+            : '<i class="fas fa-exclamation-circle"></i>';
+        
+        notificacion.innerHTML = `${icono} <span>${mensaje}</span>`;
         document.body.appendChild(notificacion);
         
         setTimeout(() => {
@@ -126,27 +129,58 @@ notificacion.innerHTML = `${icono} <span>${mensaje}</span>`;
     // Función para actualizar el contador del carrito
     function actualizarContadorCarrito() {
         const carrito = JSON.parse(localStorage.getItem('carrito') || '[]');
-        const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+        const totalItems = carrito.reduce((sum, item) => sum + (item.cantidad || 0), 0);
         
-        // Buscar o crear elemento de contador
+        // Buscar el contador existente
         let contador = document.getElementById('cart-counter');
-        if (!contador && totalItems > 0) {
-            const cartIcon = document.querySelector('a[href*="carrito"]');
-            if (cartIcon) {
-                contador = document.createElement('span');
-                contador.id = 'cart-counter';
-                contador.className = 'absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5';
-                cartIcon.style.position = 'relative';
-                cartIcon.appendChild(contador);
+        
+        if (totalItems > 0) {
+            if (contador) {
+                contador.textContent = totalItems;
+                contador.classList.remove('hidden');
+            } else {
+                // Crear el contador si no existe
+                const cartLink = document.querySelector('a[href*="carrito"]');
+                if (cartLink) {
+                    contador = document.createElement('span');
+                    contador.id = 'cart-counter';
+                    contador.className = 'absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5 min-w-[18px] text-center';
+                    contador.textContent = totalItems;
+                    cartLink.style.position = 'relative';
+                    cartLink.appendChild(contador);
+                }
+            }
+        } else {
+            if (contador) {
+                contador.classList.add('hidden');
+                contador.textContent = '0';
             }
         }
+    }
+    
+    // Función para inicializar el contador al cargar la página
+    function inicializarContadorCarrito() {
+        const carrito = JSON.parse(localStorage.getItem('carrito') || '[]');
+        const totalItems = carrito.reduce((sum, item) => sum + (item.cantidad || 0), 0);
+        const contador = document.getElementById('cart-counter');
         
         if (contador) {
             if (totalItems > 0) {
                 contador.textContent = totalItems;
-                contador.style.display = '';
+                contador.classList.remove('hidden');
             } else {
-                contador.style.display = 'none';
+                contador.classList.add('hidden');
+            }
+        } else if (totalItems > 0) {
+            // Crear contador si existe el enlace del carrito
+            const cartLink = document.querySelector('a[href*="carrito"]');
+            if (cartLink) {
+                const nuevoContador = document.createElement('span');
+                nuevoContador.id = 'cart-counter';
+                nuevoContador.className = 'absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5 min-w-[18px] text-center';
+                nuevoContador.textContent = totalItems;
+                cartLink.style.position = 'relative';
+                cartLink.appendChild(nuevoContador);
             }
         }
     }
@@ -166,27 +200,23 @@ notificacion.innerHTML = `${icono} <span>${mensaje}</span>`;
         
         // Mostrar loading
         container.innerHTML = `
-            <div class="text-center text-gray-500 py-12">
-                <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-green-600"></div>
-                <p class="mt-4">Cargando productos de ${nombreSerie}...</p>
+            <div class="text-center py-12">
+                <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-cian"></div>
+                <p class="mt-4 text-texto">Cargando productos de ${nombreSerie}...</p>
             </div>
         `;
         
         // Usar la URL amigable sin .php
         const url = `productos/${encodeURIComponent(serie)}?ajax=1`;
-        // console.log('Cargando URL:', url);
         
         fetch(url)
             .then(response => {
-                // console.log('Response status:', response.status);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 return response.text();
             })
             .then(html => {
-                // console.log('HTML recibido, longitud:', html.length);
-                
                 // Extraer solo el contenido de productos del HTML recibido
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(html, 'text/html');
@@ -201,7 +231,9 @@ notificacion.innerHTML = `${icono} <span>${mensaje}</span>`;
                     // Agregar event listeners a los botones de agregar al carrito
                     const addToCartButtons = container.querySelectorAll('.btn-add-to-cart');
                     addToCartButtons.forEach(button => {
-                        button.addEventListener('click', function() {
+                        button.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
                             const productoData = JSON.parse(this.getAttribute('data-producto'));
                             agregarAlCarrito(productoData);
                         });
@@ -214,11 +246,9 @@ notificacion.innerHTML = `${icono} <span>${mensaje}</span>`;
                     console.error('No se encontró .p-6 en la respuesta');
                     container.innerHTML = `
                         <div class="text-center text-red-500 py-12">
-                            <svg class="mx-auto h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                            <p class="mt-2">Error: No se pudo cargar los productos</p>
-                            <p class="text-sm mt-2">Por favor, revisa la consola para más detalles</p>
+                            <i class="fas fa-exclamation-circle text-5xl mb-4"></i>
+                            <p>Error: No se pudo cargar los productos</p>
+                            <p class="text-sm mt-2">Por favor, recarga la página</p>
                         </div>
                     `;
                 }
@@ -227,11 +257,11 @@ notificacion.innerHTML = `${icono} <span>${mensaje}</span>`;
                 console.error('Error detallado:', error);
                 container.innerHTML = `
                     <div class="text-center text-red-500 py-12">
-                        <svg class="mx-auto h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
-                        </svg>
-                        <p class="mt-2">Error de conexión: ${error.message}</p>
-                        <p class="text-sm mt-2">Verifica que la URL sea correcta</p>
+                        <i class="fas fa-exclamation-triangle text-5xl mb-4"></i>
+                        <p>Error de conexión: ${error.message}</p>
+                        <button onclick="location.reload()" class="mt-4 bg-gradient-to-r from-azul-oscuro to-indigo text-white px-4 py-2 rounded-lg">
+                            Recargar página
+                        </button>
                     </div>
                 `;
             });
@@ -240,10 +270,10 @@ notificacion.innerHTML = `${icono} <span>${mensaje}</span>`;
     // Función para obtener el nombre de la serie (para mostrar en loading)
     function getNombreSerie(serie) {
         const nombres = {
-            'bebidas': '🥤 Bebidas',
-            'te': '🍵 Té',
-            'varios': '🌿 Varios',
-            'ootea': '🍃 OoTea'
+            'bebidas': 'Bebidas',
+            'te': 'Té',
+            'varios': 'Varios',
+            'ootea': 'OoTea'
         };
         return nombres[serie] || serie;
     }
@@ -253,10 +283,6 @@ notificacion.innerHTML = `${icono} <span>${mensaje}</span>`;
         boton.addEventListener('click', function() {
             const serie = this.getAttribute('data-serie');
             const nombreSerie = this.textContent.trim();
-            
-            // console.log(`Botón clickeado: ${nombreSerie} (${serie})`);
-            
-            // Cargar productos (guardar en historial)
             cargarProductos(serie, nombreSerie, true);
         });
     });
@@ -264,9 +290,6 @@ notificacion.innerHTML = `${icono} <span>${mensaje}</span>`;
     // Cargar la serie inicial (bebidas por defecto o la de la URL)
     const serieInicial = '<?= $serieInicial ?>';
     const nombreSerieInicial = getNombreSerie(serieInicial);
-    // console.log(`Cargando serie inicial: ${serieInicial}`);
-    
-    // Cargar productos iniciales (sin guardar en historial para no duplicar)
     cargarProductos(serieInicial, nombreSerieInicial, false);
     
     // Manejar botones de atrás/adelante del navegador
@@ -280,8 +303,8 @@ notificacion.innerHTML = `${icono} <span>${mensaje}</span>`;
         }
     });
     
-    // Inicializar contador del carrito
-    actualizarContadorCarrito();
+    // Inicializar contador del carrito al cargar la página
+    inicializarContadorCarrito();
 });
 </script>
 

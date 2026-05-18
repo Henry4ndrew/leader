@@ -24,12 +24,52 @@ include 'includes/header.php';
 </div>
 
 <script>
+    // Función para enviar cotización por WhatsApp
+function enviarCotizacionWhatsApp() {
+    const carrito = JSON.parse(localStorage.getItem('carrito') || '[]');
+    const carritoValido = validarCarrito(carrito);
+    if (carritoValido.length === 0) {
+        mostrarNotificacion('No hay productos en el carrito', 'error');
+        return;
+    }
+    let mensaje = " *COTIZACIÓN DE PRODUCTOS* \n\n";
+    mensaje += " *Fecha:* " + new Date().toLocaleDateString('es-ES') + "\n";
+    mensaje += " *Hora:* " + new Date().toLocaleTimeString('es-ES') + "\n";
+    mensaje += "━".repeat(30) + "\n\n";
+    mensaje += " *DETALLE DEL PEDIDO:*\n\n";
+    let total = 0;
+    let tienePrecios = carritoValido.some(item => item.precio !== null && item.precio > 0);
+    carritoValido.forEach((item, index) => {
+        const cantidad = item.cantidad || 1;
+        mensaje += `*${index + 1}.* ${item.nombre}\n`;
+        mensaje += `   Cantidad: ${cantidad}\n`;
+        if (tienePrecios && item.precio !== null && item.precio > 0) {
+            const subtotal = item.precio * cantidad;
+            total += subtotal;
+            mensaje += `   Precio unitario: S/ ${item.precio.toFixed(2)}\n`;
+            mensaje += `   Subtotal: S/ ${subtotal.toFixed(2)}\n`;
+        } else {
+            mensaje += `   Precio: Consultar\n`;
+        }
+        mensaje += `\n`;
+    });
+    mensaje += "━".repeat(30) + "\n\n";
+    if (tienePrecios) {
+        mensaje += `*TOTAL:* S/ ${total.toFixed(2)}\n\n`;
+    }
+    mensaje += " *¡Gracias por tu compra!* ";
+    const mensajeCodificado = encodeURIComponent(mensaje);
+    const whatsappNumber = '<?= WHATSAPP_NUMBER ?>';
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${mensajeCodificado}`;
+    window.open(whatsappUrl, '_blank');
+    mostrarNotificacion('Redirigiendo a WhatsApp...', 'success');
+}
+
 // Función para validar y limpiar datos del carrito
 function validarCarrito(carrito) {
     if (!Array.isArray(carrito)) {
         return [];
     }
-    
     return carrito.filter(item => {
         return item && 
                typeof item === 'object' &&
@@ -299,17 +339,14 @@ function mostrarCarrito() {
             });
         });
         
-        // Event listener para el botón de checkout
-        const btnCheckout = document.getElementById('btn-checkout');
-        if (btnCheckout) {
-            btnCheckout.addEventListener('click', function() {
-                if (mostrarPrecios) {
-                    mostrarNotificacion('💰 Función de pago en desarrollo. Próximamente disponible.', 'success');
-                } else {
-                    mostrarNotificacion('📞 Por favor contacta a un asesor para cotizar estos productos.', 'success');
-                }
-            });
-        }
+
+    // Event listener para el botón de checkout
+    const btnCheckout = document.getElementById('btn-checkout');
+    if (btnCheckout) {
+        btnCheckout.addEventListener('click', function() {
+            enviarCotizacionWhatsApp();
+        });
+    }
         
     } catch (error) {
         console.error('Error al mostrar carrito:', error);
