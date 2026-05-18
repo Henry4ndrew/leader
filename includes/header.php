@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- CSS Personalizado -->
-    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/styles1.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/styles2.css">
     
     <!-- Personalizar la paleta de colores de Tailwind -->
     <script>
@@ -164,4 +164,4 @@
 
 
 <!-- JavaScript -->
-<script src="<?= BASE_URL ?>/assets/js/app.js"></script>
+<script src="<?= BASE_URL ?>/assets/js/app3.js"></script>

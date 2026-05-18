@@ -15,7 +15,7 @@ include 'includes/header.php';
                     <span class="text-xs font-semibold text-azul-oscuro tracking-wide">CONOCE DXN</span>
                 </div>
                 
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6 efect1">
                     <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                         Mi Empresa
                     </span>
@@ -37,19 +37,19 @@ include 'includes/header.php';
                 
                 <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
                     <a href="#historia" 
-                       class="group bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 text-sm md:text-base">
+                       class="group bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 text-sm md:text-base efect3">
                         <span>Conocer historia</span>
                         <i class="fas fa-arrow-down group-hover:translate-y-1 transition-transform"></i>
                     </a>
                     <a href="#certificaciones" 
-                       class="border-2 border-indigo text-indigo hover:bg-indigo hover:text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base">
+                       class="border-2 border-indigo text-indigo hover:bg-indigo hover:text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base efect3">
                         <i class="fas fa-certificate"></i>
                         <span>Certificaciones</span>
                     </a>
                 </div>
             </div>
             
-            <div class="flex-1 flex justify-center">
+            <div class="flex-1 flex justify-center efect2">
                 <img src="<?= BASE_URL ?>/assets/img/fabricaDXN.avif" 
                      alt="Fábrica DXN" 
                      class="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-2xl shadow-2xl">
@@ -68,14 +68,14 @@ include 'includes/header.php';
                 <i class="fas fa-history text-cian text-sm"></i>
                 <span class="text-xs font-semibold text-azul-oscuro tracking-wide">NUESTRA HISTORIA</span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 efect1">
                 <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                     Historia de DXN
                 </span>
             </h2>
         </div>
         
-        <div class="max-w-4xl mx-auto space-y-6">
+        <div class="max-w-4xl mx-auto space-y-6 efect2">
             <p class="text-gray-600 leading-relaxed">
                 DXN fue fundado por Datuk Lim Siow Jin graduado de un prestigioso Instituto de Tecnología de la India. 
                 Datuk Lim comenzó el negocio en busca de los beneficios de los hongos en la salud humana. Su profundo interés 
@@ -103,7 +103,7 @@ include 'includes/header.php';
                 <i class="fas fa-video text-cian text-sm"></i>
                 <span class="text-xs font-semibold text-azul-oscuro tracking-wide">MULTIMEDIA</span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 efect1">
                 <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                     Videos DXN
                 </span>
@@ -113,7 +113,7 @@ include 'includes/header.php';
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="bg-white rounded-xl shadow-md overflow-hidden">
                 <div class="relative pb-[56.25%]">
-                    <iframe class="absolute top-0 left-0 w-full h-full" 
+                    <iframe class="absolute top-0 left-0 w-full h-full efect3" 
                             src="https://www.youtube.com/embed/aTHB57LuztI?si=FDD4qO2mTnirk-gS" 
                             title="YouTube video player" 
                             frameborder="0" 
@@ -124,7 +124,7 @@ include 'includes/header.php';
             </div>
             <div class="bg-white rounded-xl shadow-md overflow-hidden">
                 <div class="relative pb-[56.25%]">
-                    <iframe class="absolute top-0 left-0 w-full h-full" 
+                    <iframe class="absolute top-0 left-0 w-full h-full efect3" 
                             src="https://www.youtube.com/embed/HW-NklGagks?si=DrdvhF8ZrvNiPQTn" 
                             title="YouTube video player" 
                             frameborder="0" 
@@ -135,7 +135,7 @@ include 'includes/header.php';
             </div>
             <div class="bg-white rounded-xl shadow-md overflow-hidden">
                 <div class="relative pb-[56.25%]">
-                    <iframe class="absolute top-0 left-0 w-full h-full" 
+                    <iframe class="absolute top-0 left-0 w-full h-full efect3" 
                             src="https://www.youtube.com/embed/UbezhP43qBM?si=PISNU2fW44ntzlp8" 
                             title="YouTube video player" 
                             frameborder="0" 
@@ -158,7 +158,7 @@ include 'includes/header.php';
                 <i class="fas fa-globe-americas text-cian text-sm"></i>
                 <span class="text-xs font-semibold text-azul-oscuro tracking-wide">CONCEPTO</span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 efect1">
                 <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                     Un Mundo, Un Mercado, Una Mente
                 </span>
@@ -167,7 +167,7 @@ include 'includes/header.php';
         
         <div class="grid md:grid-cols-3 gap-6">
             <!-- Concepto 1 -->
-            <div class="group bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="group bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 efect3">
                 <div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center">
                     <i class="fas fa-dragon text-4xl text-white"></i>
                 </div>
@@ -178,7 +178,7 @@ include 'includes/header.php';
             </div>
             
             <!-- Concepto 2 -->
-            <div class="group bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="group bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 efect3">
                 <div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center">
                     <i class="fas fa-globe text-4xl text-white"></i>
                 </div>
@@ -189,7 +189,7 @@ include 'includes/header.php';
             </div>
             
             <!-- Concepto 3 -->
-            <div class="group bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="group bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 efect3">
                 <div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
                     <i class="fas fa-brain text-4xl text-white"></i>
                 </div>
@@ -206,7 +206,7 @@ include 'includes/header.php';
      SECCIÓN: FILOSOFÍA DXN
      ======================================== -->
 <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 efect2">
         <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <div class="flex-1">
                 <img src="<?= BASE_URL ?>/assets/img/filosofia.webp" 
@@ -238,12 +238,12 @@ include 'includes/header.php';
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
         <div class="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-12">
-            <div class="flex-1">
+            <div class="flex-1 efect2">
                 <img src="<?= BASE_URL ?>/assets/img/DrLim.avif" 
                      alt="Dr. Lim Siow Jin"
                      class="rounded-2xl shadow-lg w-full">
             </div>
-            <div class="flex-1">
+            <div class="flex-1 efect1">
                 <div class="inline-flex items-center gap-2 bg-gradient-to-r from-azul-oscuro/10 to-cian/10 px-4 py-2 rounded-full mb-4">
                     <i class="fas fa-user-tie text-cian text-sm"></i>
                     <span class="text-xs font-semibold text-azul-oscuro tracking-wide">FUNDADOR</span>
@@ -274,21 +274,21 @@ include 'includes/header.php';
                 <i class="fas fa-palette text-cian text-sm"></i>
                 <span class="text-xs font-semibold text-azul-oscuro tracking-wide">SIGNIFICADO</span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 efect1">
                 <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                     Significado del Logo DXN
                 </span>
             </h2>
         </div>
         
-        <div class="flex justify-center mb-8">
+        <div class="flex justify-center mb-8 efect1">
             <img src="<?= BASE_URL ?>/assets/img/logoDXN-color.avif" 
                  alt="Logo DXN" 
                  class="w-48 h-48 object-contain">
         </div>
         
         <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 text-center">
+            <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 text-center efect3">
                 <div class="w-16 h-16 mx-auto mb-4 bg-red-500 rounded-full flex items-center justify-center">
                     <i class="fas fa-fire text-2xl text-white"></i>
                 </div>
@@ -299,7 +299,7 @@ include 'includes/header.php';
                 </div>
             </div>
             
-            <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center">
+            <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center efect3">
                 <div class="w-16 h-16 mx-auto mb-4 bg-green-500 rounded-full flex items-center justify-center">
                     <i class="fas fa-tree text-2xl text-white"></i>
                 </div>
@@ -310,7 +310,7 @@ include 'includes/header.php';
                 </div>
             </div>
             
-            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center">
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center efect3">
                 <div class="w-16 h-16 mx-auto mb-4 bg-blue-500 rounded-full flex items-center justify-center">
                     <i class="fas fa-water text-2xl text-white"></i>
                 </div>
@@ -329,7 +329,7 @@ include 'includes/header.php';
      ======================================== -->
 <section id="certificaciones" class="py-16 bg-white">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
+        <div class="text-center mb-12 efect1">
             <div class="inline-flex items-center gap-2 bg-gradient-to-r from-azul-oscuro/10 to-cian/10 px-4 py-2 rounded-full mb-4">
                 <i class="fas fa-certificate text-cian text-sm"></i>
                 <span class="text-xs font-semibold text-azul-oscuro tracking-wide">RECONOCIMIENTOS</span>
@@ -352,7 +352,7 @@ include 'includes/header.php';
                 <i class="fas fa-chevron-right"></i>
             </button>
             
-            <div class="overflow-hidden mx-8">
+            <div class="overflow-hidden mx-8 efect2">
                 <div id="certificados-carrusel" class="flex gap-6 transition-transform duration-500 ease-out">
                     <?php
                     $certificados = [

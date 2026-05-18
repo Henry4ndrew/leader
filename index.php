@@ -1,7 +1,7 @@
 <?php include 'includes/header.php'; ?>
 
 <!-- Sección Hero con imagen de perfil -->
-<section class="relative overflow-hidden bg-gradient-to-br from-white to-gray-50">
+<section class="relative overflow-hidden bg-gradient-to-br from-white to-gray-50 efect2">
     <div class="container mx-auto px-4 py-8 md:py-12 lg:py-16">
         <div class="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
             
@@ -14,7 +14,7 @@
                 </div>
                 
                 <!-- Título principal -->
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6 efect1">
                     <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                         Formamos Líderes
                     </span>
@@ -39,12 +39,12 @@
                 <!-- Botones CTA -->
                 <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
                     <a href="<?= BASE_URL ?>/oportunidad.php" 
-                       class="group bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 text-sm md:text-base">
+                       class="group bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 text-sm md:text-base efect3">
                         <span>Comenzar mi camino</span>
                         <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                     </a>
                     <a href="<?= BASE_URL ?>/sobre_mi.php" 
-                       class="border-2 border-indigo text-indigo hover:bg-indigo hover:text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base">
+                       class="border-2 border-indigo text-indigo hover:bg-indigo hover:text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base efect3">
                         <i class="fas fa-play-circle"></i>
                         <span>Conocer más</span>
                     </a>
@@ -85,7 +85,7 @@
      ======================================== -->
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
+        <div class="text-center mb-12 efect1">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">
                 <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                     Nuestros Pilares
@@ -98,7 +98,7 @@
         
         <div class="grid md:grid-cols-3 gap-8">
             <!-- Pilar 1: Liderazgo -->
-            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 efect3">
                 <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-azul-oscuro/10 to-indigo/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                     <i class="fas fa-crown text-3xl text-azul-oscuro"></i>
                 </div>
@@ -109,7 +109,7 @@
             </div>
             
             <!-- Pilar 2: Desarrollo Personal -->
-            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 efect3">
                 <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-indigo/10 to-cian/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                     <i class="fas fa-chart-line text-3xl text-indigo"></i>
                 </div>
@@ -120,7 +120,7 @@
             </div>
             
             <!-- Pilar 3: Network Marketing -->
-            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="group text-center p-6 rounded-xl hover:shadow-xl transition-all duration-300 efect3">
                 <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-cian/10 to-azul-oscuro/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                     <i class="fas fa-users text-3xl text-cian"></i>
                 </div>
@@ -136,7 +136,7 @@
 <!-- ========================================
      SECCIÓN DE LLAMADA A LA ACCIÓN
      ======================================== -->
-<section class="py-16 bg-gradient-to-r from-azul-oscuro via-indigo to-cian">
+<section class="py-16 bg-gradient-to-r from-azul-oscuro via-indigo to-cian efect2">
     <div class="container mx-auto px-4 text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
             ¿Listo para Transformar tu Vida?
@@ -157,7 +157,7 @@
      ======================================== -->
 <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
+        <div class="text-center mb-12 efect1">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">
                 <span class="text-gradient bg-gradient-to-r from-azul-oscuro to-indigo bg-clip-text text-transparent">
                     Lo que Dicen Nuestros Líderes
@@ -170,7 +170,7 @@
         
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Testimonio 1 -->
-            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all">
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all efect3">
                 <div class="flex items-center gap-1 mb-4">
                     <i class="fas fa-star text-yellow-400"></i>
                     <i class="fas fa-star text-yellow-400"></i>
@@ -193,7 +193,7 @@
             </div>
             
             <!-- Testimonio 2 -->
-            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all">
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all efect3">
                 <div class="flex items-center gap-1 mb-4">
                     <i class="fas fa-star text-yellow-400"></i>
                     <i class="fas fa-star text-yellow-400"></i>
@@ -216,7 +216,7 @@
             </div>
             
             <!-- Testimonio 3 -->
-            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all md:col-span-2 lg:col-span-1">
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all efect3 md:col-span-2 lg:col-span-1">
                 <div class="flex items-center gap-1 mb-4">
                     <i class="fas fa-star text-yellow-400"></i>
                     <i class="fas fa-star text-yellow-400"></i>
