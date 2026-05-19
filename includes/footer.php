@@ -113,98 +113,168 @@ $cta_version = getCTAVersion();
     </section>
 <?php endif; ?>
 
-<footer class="bg-gradient-to-r from-azul-oscuro via-indigo to-cian text-white mt-0">
-    <div class="container mx-auto px-4 py-8">
-        <!-- Contenido principal del footer - 2 columnas -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+<footer class="bg-gradient-to-r from-azul-oscuro via-indigo to-cian text-white mt-0 overflow-hidden">
+   <div class="container mx-auto px-4 pt-12 pb-6 md:pt-12 md:pb-6">
+        <!-- Contenido principal del footer - 3 columnas en desktop para mejor organización -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
             
-            <!-- Columna 1: Logo y marca -->
+            <!-- Columna 1: Logo y marca (más completa) -->
             <div class="text-center md:text-left">
                 <div class="flex flex-col items-center md:items-start gap-4">
                     <!-- Logo y nombre -->
-                    <a href="<?= BASE_URL ?>/" class="flex items-center justify-center md:justify-start gap-3 hover:opacity-90 transition-opacity efect2">
+                    <a href="<?= BASE_URL ?>/" class="flex items-center gap-3 hover:opacity-90 transition-all duration-300 group flex-shrink-0">
                         <img src="<?= BASE_URL ?>/assets/img/logoDXN.avif" 
-                             alt="Logo Leader DXN" 
-                             class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain rounded-lg bg-white/10 backdrop-blur-sm p-1.5">
+                            alt="Logo Lead DXN" 
+                            class="w-12 h-12 object-contain rounded-xl bg-white/10 backdrop-blur-sm p-1.5 group-hover:scale-105 transition-transform duration-300">
                         <div>
-                            <h1 class="text-base sm:text-lg md:text-xl font-bold tracking-tight whitespace-nowrap">
-                                Leader DXN
-                            </h1>
-                            <p class="text-sm text-cyan-200 hidden sm:block">
-                                Formando profesionales
-                            </p>
+                            <h1 class="text-xl font-bold tracking-tight bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">Lead DXN</h1>
+                            <p class="text-xs text-cyan-200/70">Networking & Desarrollo</p>
                         </div>
                     </a>
                     
-                    <!-- Descripción -->
-                    <p class="text-base text-cyan-100 max-w-sm mx-auto md:mx-0 efect2">
-                        Productos naturales con Ganoderma, calidad y confianza para tu bienestar.
+                    <!-- Descripción más detallada -->
+                    <p class="text-sm text-cyan-100 leading-relaxed max-w-sm mx-auto md:mx-0">
+                        Formando profesionales en Network marketing con más de 5 años de experiencia. 
+                        <span class="block mt-2 text-cyan-200/80">¡Tu éxito es nuestra meta!</span>
                     </p>
+
+                    <!-- Badge de confianza -->
+                    <div class="flex items-center gap-2 bg-white/5 rounded-full px-3 py-1.5 backdrop-blur-sm">
+                        <i class="fas fa-shield-alt text-cyan-200 text-xs"></i>
+                        <span class="text-xs text-cyan-100">Certificado en Marketing Digital</span>
+                    </div>
                 </div>
             </div>
             
-            <!-- Columna 2: Redes Sociales y contacto -->
+            <!-- Columna 2: Enlaces rápidos (NUEVA COLUMNA MEJORADA) -->
+            <div class="text-center md:text-left">
+                <div class="flex flex-col items-center md:items-start gap-4">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-link text-cyan-200 text-lg"></i>
+                        <h3 class="text-lg font-bold uppercase tracking-wide">Enlaces rápidos</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <a href="<?= BASE_URL ?>/" class="text-cyan-100 hover:text-white transition-colors duration-300 flex items-center gap-2 group">
+                                <i class="fas fa-chevron-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= BASE_URL ?>/tienda-virtual" class="text-cyan-100 hover:text-white transition-colors duration-300 flex items-center gap-2 group">
+                                <i class="fas fa-chevron-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                                Tienda Virtual
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= BASE_URL ?>/productos" class="text-cyan-100 hover:text-white transition-colors duration-300 flex items-center gap-2 group">
+                                <i class="fas fa-chevron-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                                Productos DXN
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= BASE_URL ?>/oportunidad-negocio" class="text-cyan-100 hover:text-white transition-colors duration-300 flex items-center gap-2 group">
+                                <i class="fas fa-chevron-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                                Oportunidad de Negocio
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Columna 3: Redes Sociales y contacto (mejorada) -->
             <div class="text-center md:text-right">
                 <div class="flex flex-col items-center md:items-end gap-4">
                     <!-- Título Redes Sociales -->
-                    <div class="flex items-center justify-center md:justify-end gap-2 efect2">
-                        <i class="fas fa-share-alt text-2xl text-cyan-200"></i>
-                        <h3 class="text-xl font-bold">Síguenos</h3>
+                    <div class="flex items-center justify-center md:justify-end gap-2">
+                        <div class="w-8 h-px bg-gradient-to-l from-cyan-200/50 to-transparent hidden md:block"></div>
+                        <i class="fas fa-share-alt text-2xl text-cyan-200 animate-pulse"></i>
+                        <h3 class="text-lg font-bold uppercase tracking-wide">Síguenos</h3>
                     </div>
                     
-                    <!-- Iconos Redes Sociales -->
-                    <div class="flex justify-center md:justify-end gap-4">
+                    <!-- Iconos Redes Sociales (más grandes y con tooltips) -->
+                    <div class="flex justify-center md:justify-end gap-3">
                         <a href="<?= FACEBOOK_URL ?>" target="_blank" 
-                        class="bg-white/10 hover:bg-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 group efect3">
+                           class="bg-white/10 hover:bg-white w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-6 group relative"
+                           title="Síguenos en Facebook">
                             <i class="fab fa-facebook-f text-xl text-white group-hover:text-azul-oscuro transition-colors"></i>
                         </a>
 
                         <a href="<?= INSTAGRAM_URL ?>" target="_blank" 
-                        class="bg-white/10 hover:bg-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 group efect3">
+                           class="bg-white/10 hover:bg-white w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-6 group relative"
+                           title="Síguenos en Instagram">
                             <i class="fab fa-instagram text-xl text-white group-hover:text-azul-oscuro transition-colors"></i>
                         </a>
 
                         <a href="<?= TIKTOK_URL ?>" target="_blank" 
-                        class="bg-white/10 hover:bg-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 group efect3">
+                           class="bg-white/10 hover:bg-white w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-6 group relative"
+                           title="Síguenos en TikTok">
                             <i class="fab fa-tiktok text-xl text-white group-hover:text-azul-oscuro transition-colors"></i>
                         </a>
 
                         <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>" target="_blank" 
-                        class="bg-white/10 hover:bg-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 group efect3">
+                           class="bg-white/10 hover:bg-white w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-6 group relative"
+                           title="Contáctanos por WhatsApp">
                             <i class="fab fa-whatsapp text-xl text-white group-hover:text-azul-oscuro transition-colors"></i>
                         </a>
                     </div>
                     
-                    <!-- Contacto WhatsApp y Email -->
-                    <div class="flex flex-col items-center md:items-end gap-2 efect2">
-                        <div class="flex items-center gap-2">
-                            <i class="fab fa-whatsapp text-cyan-200 text-sm"></i>
-                            <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>" target="_blank" class="text-sm hover:text-cyan-200 transition">
+                    <!-- Contacto WhatsApp y Email (mejorado) -->
+                    <div class="space-y-2 w-full">
+                        <div class="flex items-center justify-center md:justify-end gap-3 bg-white/5 rounded-lg p-2 transition-all hover:bg-white/10">
+                            <div class="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center">
+                                <i class="fab fa-whatsapp text-cyan-200 text-sm"></i>
+                            </div>
+                            <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>" target="_blank" class="text-sm hover:text-cyan-200 transition font-medium">
                                 +<?= WHATSAPP_NUMBER ?>
                             </a>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-envelope text-cyan-200 text-sm"></i>
-                            <a href="mailto:<?= CONTACT_EMAIL ?>" class="text-sm hover:text-cyan-200 transition">
+                        <div class="flex items-center justify-center md:justify-end gap-3 bg-white/5 rounded-lg p-2 transition-all hover:bg-white/10">
+                            <div class="w-8 h-8 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-envelope text-cyan-200 text-sm"></i>
+                            </div>
+                            <a href="mailto:<?= CONTACT_EMAIL ?>" class="text-sm hover:text-cyan-200 transition font-medium">
                                 <?= CONTACT_EMAIL ?>
                             </a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
         
-        <!-- Línea divisoria -->
-        <div class="border-t border-white/20 pt-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-sm text-cyan-100">
-                    &copy; <?= date('Y') ?> Leader DXN. Todos los derechos reservados.
-                </p>
-                <div class="flex gap-4 text-xs text-cyan-200">
-                    <a href="#" class="hover:text-white transition">Términos y condiciones</a>
-                    <span>|</span>
-                    <a href="#" class="hover:text-white transition">Política de privacidad</a>
-                </div>
+        <!-- Línea divisoria decorativa -->
+        <div class="relative">
+            <div class="border-t border-white/20"></div>
+            <div class="absolute -top-1 left-1/2 transform -translate-x-1/2 w-20 h-0.5 bg-gradient-to-r from-transparent via-cyan-200 to-transparent"></div>
+        </div>
+        
+        <!-- Copyright (mejorado con más información) -->
+        <div class="pt-6 text-center">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 text-xs text-cyan-100">
+                <a href="#" class="hover:text-white transition-colors flex items-center gap-1">
+                    <i class="fas fa-file-contract text-cyan-200 text-xs"></i>
+                    Términos y condiciones
+                </a>
+                <span class="hidden md:inline text-cyan-200/50">•</span>
+                <a href="#" class="hover:text-white transition-colors flex items-center gap-1">
+                    <i class="fas fa-lock text-cyan-200 text-xs"></i>
+                    Política de privacidad
+                </a>
+                <span class="hidden md:inline text-cyan-200/50">•</span>
+                <a href="#" class="hover:text-white transition-colors flex items-center gap-1">
+                    <i class="fas fa-cookie-bite text-cyan-200 text-xs"></i>
+                    Política de cookies
+                </a>
+            </div>
+            
+            <div class="mt-0">
+                <a href="https://b1tsoft.kesug.com" target="_blank" 
+                   class="text-xs text-cyan-100 hover:text-white transition-colors inline-flex items-center gap-1 group">
+                    <span>&copy; <?= date('Y') ?> Henry4ndrew | B1tsoft - Lead DXN</span>
+                    <i class="fas fa-external-link-alt text-cyan-200/50 group-hover:text-cyan-200 transition-colors text-xs"></i>
+                </a>
+                <p class="text-xs text-cyan-200/60 mt-1">Todos los derechos reservados.</p>
             </div>
         </div>
     </div>

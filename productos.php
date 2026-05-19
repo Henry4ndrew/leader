@@ -54,11 +54,11 @@ if ($esAjax) {
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <?php foreach($productos as $producto): ?>
-                    <div class="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden efect3">
+                    <div class="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden efect3 flex flex-col h-full">
                         <div class="absolute inset-0 bg-gradient-to-r from-cian via-indigo to-azul-oscuro opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-sm -z-10"></div>
                         
-                        <div class="bg-white rounded-2xl p-0 relative z-10">
-                            <a href="<?= BASE_URL ?>/producto/<?= $producto['id'] ?>" class="block">
+                        <div class="bg-white rounded-2xl p-0 relative z-10 flex flex-col h-full">
+                            <a href="<?= BASE_URL ?>/producto/<?= $producto['id'] ?>" class="block flex-shrink-0">
                                 <div class="relative h-56 overflow-hidden bg-gradient-to-br from-seccion-suave to-cian/20 rounded-t-2xl">
                                     <?php 
                                     $imgPath = $producto['imagen'] ?? '';
@@ -87,7 +87,7 @@ if ($esAjax) {
                                 </div>
                             </a>
                             
-                            <div class="p-5">
+                            <div class="p-5 flex flex-col flex-grow">
                                 <div class="mb-2">
                                     <span class="text-xs text-cian font-semibold uppercase tracking-wider">
                                         <i class="fas fa-tag mr-1"></i>
@@ -95,35 +95,44 @@ if ($esAjax) {
                                     </span>
                                 </div>
                                 
-                                <a href="<?= BASE_URL ?>/producto/<?= $producto['id'] ?>" class="block">
+                                <a href="<?= BASE_URL ?>/producto/<?= $producto['id'] ?>" class="block flex-shrink-0">
                                     <h2 class="font-bold text-xl text-azul-oscuro mb-2 line-clamp-1 group-hover:text-cian transition-colors">
                                         <?= htmlspecialchars($producto['nombre']) ?>
                                     </h2>
-                                    <p class="text-texto text-sm mb-4 line-clamp-2 leading-relaxed">
-                                        <?= htmlspecialchars($producto['descripcion']) ?>
-                                    </p>
+                                    <!-- Descripción con altura fija -->
+                                    <div class="h-10 mb-4">
+                                        <p class="text-texto text-sm line-clamp-2 leading-relaxed">
+                                            <?= htmlspecialchars($producto['descripcion']) ?>
+                                        </p>
+                                    </div>
                                 </a>
                                 
-                                <?php if(isset($producto['beneficios']) && is_array($producto['beneficios'])): ?>
-                                    <div class="mb-4">
-                                        <div class="space-y-1">
-                                            <?php foreach(array_slice($producto['beneficios'], 0, 2) as $beneficio): ?>
+                                <!-- Contenedor de beneficios con altura fija y scroll si es necesario -->
+                                <div class="mb-4 flex-grow">
+                                    <?php if(isset($producto['beneficios']) && is_array($producto['beneficios'])): ?>
+                                        <div class="space-y-1 max-h-24 overflow-y-auto custom-scrollbar">
+                                            <?php 
+                                            $beneficiosMostrar = array_slice($producto['beneficios'], 0, 3);
+                                            foreach($beneficiosMostrar as $beneficio): ?>
                                                 <div class="flex items-start text-xs">
-                                                    <i class="fas fa-check-circle text-cian mt-0.5 mr-1.5 flex-shrink-0"></i>
-                                                    <span class="text-texto"><?= htmlspecialchars($beneficio) ?></span>
+                                                    <i class="fas fa-check-circle text-cian mt-0.5 mr-1.5 flex-shrink-0 text-xs"></i>
+                                                    <span class="text-texto break-words"><?= htmlspecialchars($beneficio) ?></span>
                                                 </div>
                                             <?php endforeach; ?>
-                                            <?php if(count($producto['beneficios']) > 2): ?>
+                                            <?php if(count($producto['beneficios']) > 3): ?>
                                                 <div class="text-xs text-cian mt-1">
                                                     <i class="fas fa-plus-circle mr-1"></i>
-                                                    + <?= count($producto['beneficios']) - 2 ?> beneficios más
+                                                    + <?= count($producto['beneficios']) - 3 ?> más
                                                 </div>
                                             <?php endif; ?>
                                         </div>
-                                    </div>
-                                <?php endif; ?>
+                                    <?php else: ?>
+                                        <div class="h-16"></div>
+                                    <?php endif; ?>
+                                </div>
                                 
-                                <button class="btn-add-to-cart w-full bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white px-4 py-2.5 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 group/btn"
+                                <!-- Botón siempre al final -->
+                                <button class="btn-add-to-cart w-full bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white px-4 py-2.5 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 group/btn mt-auto"
                                         data-producto='<?= json_encode([
                                             'id' => $producto['id'],
                                             'nombre' => $producto['nombre'],
@@ -141,6 +150,27 @@ if ($esAjax) {
                 <?php endforeach; ?>
             </div>
         </div>
+
+        <style>
+        /* Estilos para scroll personalizado en beneficios */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        </style>
         <?php
     } else {
         ?>
@@ -174,11 +204,11 @@ include 'includes/header.php';
 <?php if(!empty($productos)): ?>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <?php foreach($productos as $producto): ?>
-            <div class="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden efect3">
+            <div class="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden efect3 flex flex-col h-full">
                 <div class="absolute inset-0 bg-gradient-to-r from-cian via-indigo to-azul-oscuro opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-sm -z-10"></div>
                 
-                <div class="bg-white rounded-2xl p-0 relative z-10">
-                    <a href="<?= BASE_URL ?>/producto/<?= $producto['id'] ?>" class="block">
+                <div class="bg-white rounded-2xl p-0 relative z-10 flex flex-col h-full">
+                    <a href="<?= BASE_URL ?>/producto/<?= $producto['id'] ?>" class="block flex-shrink-0">
                         <div class="relative h-56 overflow-hidden bg-gradient-to-br from-seccion-suave to-cian/20 rounded-t-2xl">
                             <?php 
                             $imgPath = $producto['imagen'] ?? '';
@@ -207,7 +237,7 @@ include 'includes/header.php';
                         </div>
                     </a>
                     
-                    <div class="p-5">
+                    <div class="p-5 flex flex-col flex-grow">
                         <div class="mb-2">
                             <span class="text-xs text-cian font-semibold uppercase tracking-wider">
                                 <i class="fas fa-tag mr-1"></i>
@@ -215,40 +245,49 @@ include 'includes/header.php';
                             </span>
                         </div>
                         
-                        <a href="<?= BASE_URL ?>/producto/<?= $producto['id'] ?>" class="block">
+                        <a href="<?= BASE_URL ?>/producto/<?= $producto['id'] ?>" class="block flex-shrink-0">
                             <h2 class="font-bold text-xl text-azul-oscuro mb-2 line-clamp-1 group-hover:text-cian transition-colors">
                                 <?= htmlspecialchars($producto['nombre']) ?>
                             </h2>
-                            <!-- 🔽 CAMBIADO: line-clamp-2 → line-clamp-1 (solo UNA línea) -->
-                            <p class="text-texto text-sm mb-4 line-clamp-1 leading-relaxed">
-                                <?= htmlspecialchars($producto['descripcion']) ?>
-                            </p>
+                            <!-- Descripción con altura fija -->
+                            <div class="h-10 mb-4">
+                                <p class="text-texto text-sm line-clamp-2 leading-relaxed">
+                                    <?= htmlspecialchars($producto['descripcion']) ?>
+                                </p>
+                            </div>
                         </a>
                         
-                        <?php if(isset($producto['beneficios']) && is_array($producto['beneficios'])): ?>
-                            <div class="mb-4">
-                                <div class="space-y-1">
-                                    <?php foreach(array_slice($producto['beneficios'], 0, 2) as $beneficio): ?>
+                        <!-- Contenedor de beneficios con altura fija y scroll si es necesario -->
+                        <div class="mb-4 flex-grow">
+                            <?php if(isset($producto['beneficios']) && is_array($producto['beneficios'])): ?>
+                                <div class="space-y-1 max-h-24 overflow-y-auto custom-scrollbar">
+                                    <?php 
+                                    $beneficiosMostrar = array_slice($producto['beneficios'], 0, 3);
+                                    foreach($beneficiosMostrar as $beneficio): ?>
                                         <div class="flex items-start text-xs">
-                                            <i class="fas fa-check-circle text-cian mt-0.5 mr-1.5 flex-shrink-0"></i>
-                                            <span class="text-texto"><?= htmlspecialchars($beneficio) ?></span>
+                                            <i class="fas fa-check-circle text-cian mt-0.5 mr-1.5 flex-shrink-0 text-xs"></i>
+                                            <span class="text-texto break-words"><?= htmlspecialchars($beneficio) ?></span>
                                         </div>
                                     <?php endforeach; ?>
-                                    <?php if(count($producto['beneficios']) > 2): ?>
+                                    <?php if(count($producto['beneficios']) > 3): ?>
                                         <div class="text-xs text-cian mt-1">
                                             <i class="fas fa-plus-circle mr-1"></i>
-                                            + <?= count($producto['beneficios']) - 2 ?> beneficios más
+                                            + <?= count($producto['beneficios']) - 3 ?> más
                                         </div>
                                     <?php endif; ?>
                                 </div>
-                            </div>
-                        <?php endif; ?>
-                        <button class="btn-add-to-cart w-full bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white px-4 py-2.5 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 group/btn"
+                            <?php else: ?>
+                                <div class="h-16"></div>
+                            <?php endif; ?>
+                        </div>
+                        
+                        <!-- Botón siempre al final -->
+                        <button class="btn-add-to-cart w-full bg-gradient-to-r from-azul-oscuro to-indigo hover:from-indigo hover:to-azul-oscuro text-white px-4 py-2.5 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 group/btn mt-auto"
                         data-producto='<?= json_encode([
                             'id' => $producto['id'],
                             'nombre' => $producto['nombre'],
                             'precio' => $producto['precio'] ?? null,
-                            'imagen' => $producto['imagen'] ?? '/assets/img/placeholder.avif',  // ← CORREGIDO (sin BASE_URL)
+                            'imagen' => $producto['imagen'] ?? '/assets/img/placeholder.avif',
                             'cantidad' => 1
                         ]) ?>'>
                             <i class="fas fa-cart-plus group-hover/btn:scale-110 transition-transform"></i>
@@ -279,4 +318,26 @@ include 'includes/header.php';
 <?php endif; ?>
 </div>
 
+<style>
+/* Estilos para scroll personalizado en beneficios */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+</style>
+
 <?php include 'includes/footer.php'; ?>
+

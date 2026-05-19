@@ -130,7 +130,6 @@ if (!$producto) {
                 <div class="mt-4 text-center">
                     <a href="<?= BASE_URL ?>/tienda-virtual?serie=<?= $serieEncontrada ?>" 
                     class="efect2 border-2 border-indigo text-indigo hover:bg-indigo hover:text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base inline-flex">
-                        
                         <i class="fas fa-shopping-bag"></i>
                         <span>Seguir comprando</span>
                     </a>
